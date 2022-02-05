@@ -1,0 +1,7 @@
+stories:
+ - story: greet and help
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: help
+   - action: utter_help

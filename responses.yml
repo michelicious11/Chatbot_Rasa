@@ -1,0 +1,13 @@
+responses:
+   utter_greet:
+       - text: |
+           Bonjour! Comment puis-je vous assister ?
+       - text: |
+           Bonjour! Comment puis-je vous aider ?
+       - text: |
+           Salut ! Que puis-je faire pour vous ?
+   utter_help:
+       - text: |
+           Avec plaisir!
+       - text: | 
+           Je suis la pour vous aider

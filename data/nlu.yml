@@ -1,0 +1,16 @@
+nlu:
+- intent: greet
+  examples: |
+    - Salut!
+    - Hey!
+    - Allô
+    - Bonjour
+    - Bon Matin
+    - Hi!
+
+- intent: help
+  examples: |
+    - J'ai besoin d'aide
+    - J'ai besoin d'assistance
+    - J'ai une question
+    - Pouvez-vous m'aider ?
