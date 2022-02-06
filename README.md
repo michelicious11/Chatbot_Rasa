@@ -1,3 +1,3 @@
 # Chatbot_Rasa
 
-Projet Sythese
+Projet Synthese

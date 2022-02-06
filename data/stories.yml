@@ -4,4 +4,8 @@ stories:
    - intent: greet
    - action: utter_greet
    - intent: help
+   - action: utter_affirm
+   - intent: question
    - action: utter_help
+   - intent: thanks
+   - action: utter_goodbye

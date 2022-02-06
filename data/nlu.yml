@@ -6,6 +6,7 @@ nlu:
     - Allô
     - Bonjour
     - Bon Matin
+    - Bonsoir
     - Hi!
 
 - intent: help
@@ -13,4 +14,18 @@ nlu:
     - J'ai besoin d'aide
     - J'ai besoin d'assistance
     - J'ai une question
-    - Pouvez-vous m'aider ?
+    - Pouvez-vous m'aider?
+
+- intent: question
+  examples: |
+    - Comment appliquer pour un programme?
+    - Quels sont les programmes d'études?
+    - Quelle est la date limite pour les admissions?
+    - Comment est-ce que je peux payer mes frais d'admission?
+    - Quelle est la date limite de paiement de droits de scolarité?
+
+- intent: thanks
+  examples: |
+    - Merci
+    - Ok merci
+    - Parfait, merci

@@ -1,13 +1,30 @@
 responses:
-   utter_greet:
-       - text: |
-           Bonjour! Comment puis-je vous assister ?
-       - text: |
-           Bonjour! Comment puis-je vous aider ?
-       - text: |
-           Salut ! Que puis-je faire pour vous ?
-   utter_help:
-       - text: |
-           Avec plaisir!
-       - text: | 
-           Je suis la pour vous aider
+  utter_greet:
+  - text: |
+      Bonjour! Comment puis-je vous assister aujourd'hui?
+  - text: |
+      Bonjour! Comment puis-je vous aider?
+  - text: |
+      Salut! Que puis-je faire pour vous?
+
+  utter_affirm:
+  - text: |
+      Avec plaisir!
+  - text: |
+      Pas de problème!
+  - text: |
+      Oui, bien sûr!
+
+  utter_help:
+  - text: |
+      Quel est l'objet de votre question?
+  - text: |
+      Sur quel sujet voulez-vous de l'information?
+
+  utter_goodbye:
+  - text: |
+      Bonne journée!
+  - text: |
+      Aurevoir!
+  - text: |
+      À la prochaine!
