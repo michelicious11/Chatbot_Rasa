@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-UQO",
+      "2": "I-UQO",
+      "3": "L-UQO",
+      "4": "U-UQO",
+      "5": "B-admission",
+      "6": "I-admission",
+      "7": "L-admission",
+      "8": "U-admission",
+      "9": "B-finances",
+      "10": "I-finances",
+      "11": "L-finances",
+      "12": "U-finances",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-UQO": 1,
+      "I-UQO": 2,
+      "L-UQO": 3,
+      "U-UQO": 4,
+      "B-admission": 5,
+      "I-admission": 6,
+      "L-admission": 7,
+      "U-admission": 8,
+      "B-finances": 9,
+      "I-finances": 10,
+      "L-finances": 11,
+      "U-finances": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

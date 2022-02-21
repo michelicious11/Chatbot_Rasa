@@ -5,7 +5,6 @@ stories:
    - action: utter_greet
    - intent: help
    - action: utter_affirm
-   - intent: question
-   - action: utter_help
-   - intent: thanks
+   - intent: bye
    - action: utter_goodbye
+

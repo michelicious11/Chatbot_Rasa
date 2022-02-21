@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-admission",
+      "2": "I-admission",
+      "3": "L-admission",
+      "4": "U-admission",
+      "5": "B-finances",
+      "6": "I-finances",
+      "7": "L-finances",
+      "8": "U-finances",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-admission": 1,
+      "I-admission": 2,
+      "L-admission": 3,
+      "U-admission": 4,
+      "B-finances": 5,
+      "I-finances": 6,
+      "L-finances": 7,
+      "U-finances": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
