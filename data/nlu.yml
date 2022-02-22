@@ -8,7 +8,6 @@ nlu:
     - Bonjour
     - Bon Matin
     - Bonsoir
-    - Hi!
 
 - intent: help
   examples: |
@@ -24,79 +23,79 @@ nlu:
     - Parfait, merci
     
 # Section, questions pour les admissions
-- intent: ask_demande_admission
+- intent: faq/ask_demande_admission
   examples: |
     - Comment faire une [demande](admission) d'admission?
     - Comment appliquer pour un [programme](admission)?
-- intent: ask_etapes_admission
+- intent: faq/ask_etapes_admission
   examples: |
     - Quelles sont les etapes pour faire une demande d'admission?
-- intent: ask_nombre_programmes
+- intent: faq/ask_nombre_programmes
   examples: |
     - Combien de [programmes](admission) peut-on choisir?
-- intent: ask_pieces_admission
+- intent: faq/ask_pieces_admission
   examples: |
     - Quelles sont les pieces requises pour l'(admission)?
     - De quoi avons-nous besoin pour remplir la [demande] d'(admission)?
-- intent: ask_dates_limites_admission
+- intent: faq/ask_dates_limites_admission
   examples: |
     - Quelles sont les [dates] limites d'(admission)?
-- intent: ask_frais_admission
+- intent: faq/ask_frais_admission
   examples: |
     - Combien sont les [droits](finances) d'(admission)?
     - Combien coute les [frais](finances) d'(admission)?
-- intent: ask_modalite_admission
+- intent: faq/ask_modalite_admission
   examples: |
     - Quelles sont les [modalites](finances) de [paiement](finances) pour les droits d'admission?
     - Comment est-ce que je peux payer mes [frais](finances) d'admission?
-- intent: ask_perdu_preuve_admission
+- intent: faq/ask_perdu_preuve_admission
   examples: |
     - J'ai perdu ma preuve de reception
-- intent: ask_formation_candidats_non_quebecois_admission
+- intent: faq/ask_formation_candidats_non_quebecois_admission
   examples: |
     - Niveaux de formation pour l'admission generale des candidats non quebecois?
-- intent: ask_non_dec_admission
+- intent: faq/ask_non_dec_admission
   examples: |
     - Puis-je être admis à l’UQO si je n’ai pas encore obtenu mon [DEC](admission)?
-- intent: ask_delai_dec_admission
+- intent: faq/ask_delai_dec_admission
   examples: |
     - Que dois-je faire pour obtenir un délai additionnel pour l’obtention de mon DEC?
-- intent: ask_delai_depasse_dec_admission
+- intent: faq/ask_delai_depasse_dec_admission
   examples: |
     - Qu’arrive-t-il si, après mon delai de [12 mois](admission), je n’ai toujours pas obtenu mon [DEC](admission)?
-- intent: ask_reconnaissance_acquis_admission
+- intent: faq/ask_reconnaissance_acquis_admission
   examples: |
     - Ai-je droit a une reconnaissance des [acquis](admission)?
-- intent: ask_entente_dec_bac_admission
+- intent: faq/ask_entente_dec_bac_admission
   examples: |
     - Existe-t-il une passerelles et ententes DEC-BAC pour mon programme?
-- intent: ask_demande_reconnaissances_acquis_admission
+- intent: faq/ask_demande_reconnaissances_acquis_admission
   examples: |
     - Quelle est la procedure a suivre pour la demande de reconnaissances des [acquis](admission)?
-- intent: ask_date_limite_reconnaissance_acquis
+- intent: faq/ask_date_limite_reconnaissance_acquis
   examples: |
     - Quelle est la date limite pour la demande de reconnaissances des acquis?
-- intent: ask_frais_depot_demande_reconnaissance
+- intent: faq/ask_frais_depot_demande_reconnaissance
   examples: |
     - Quels sont les frais pour le depot de la demande de reconnaissances des acquis?
-- intent: ask_liste_programmes_admission
+- intent: faq/ask_liste_programmes_admission
   examples: |
     - Quels sont les programmes de l'(UQO)?
-- intent: ask_transfert_procedure_admission
+- intent: faq/ask_transfert_procedure_admission
   examples: |
     - Quelle est la procedure de transfert entre [campus](UQO)?
-- intent: ask_diplome_etranger_admission
+- intent: faq/ask_diplome_etranger_admission
   examples: |
     - Est-ce que mon [diplome](admission) de mon (pays) me rendent admissible a un programme d'etude?
-- intent: ask_etudiant_international
+- intent: faq/ask_etudiant_international
   examples: |
     - Je suis un etudiant international?
-- intent: ask_decision_admission
+- intent: faq/ask_decision_admission
   examples: |
     - Quand puis-je m'attendre a recevoir ma decision d'admission?
-- intent: ask_types_admission
+- intent: faq/ask_types_admission
   examples: |
     - Quels sont les types d'admission a l'UQO?
-- intent: ask_choix_cours_admission
+- intent: faq/ask_choix_cours_admission
   examples: |
     - Comment faire son choix de cours?

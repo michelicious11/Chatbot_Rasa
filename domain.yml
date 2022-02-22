@@ -27,30 +27,7 @@ intents:
 - help
 - bye
 # admission
-- ask_demande_admission
-- ask_etapes_admission
-- ask_nombre_programmes
-- ask_pieces_admission
-- ask_dates_limites_admission
-- ask_frais_admission
-- ask_modalite_admission
-- ask_perdu_preuve_admission
-- ask_formation_candidats_non_quebecois_admission
-- ask_non_dec_admission
-- ask_delai_dec_admission
-- ask_delai_depasse_dec_admission
-- ask_reconnaissance_acquis_admission
-- ask_entente_dec_bac_admission
-- ask_demande_reconnaissances_acquis_admission
-- ask_date_limite_reconnaissance_acquis
-- ask_frais_depot_demande_reconnaissance
-- ask_liste_programmes_admission
-- ask_transfert_procedure_admission
-- ask_diplome_etranger_admission
-- ask_etudiant_international
-- ask_decision_admission
-- ask_types_admission
-- ask_choix_cours_admission
+- faq
 
 # Reponse ----------------------------------------------------------------
 responses:
@@ -62,21 +39,19 @@ responses:
   - text: |
       Salut! Que puis-je faire pour vous?
 
-  utter_affirm:
-  - text: |
-      Avec plaisir!
-  - text: |
-      Pas de problème!
-  - text: |
-      Oui, bien sûr!
+#   utter_affirm:
+#   - text: |
+#       Avec plaisir!
+#   - text: |
+#       Pas de problème!
+#   - text: |
+#       Oui, bien sûr!
 
   utter_help:
   - text: |
       Quel est l'objet de votre question?
   - text: |
       Sur quel sujet voulez-vous de l'information?
-  - text: |
-      Quelle est votre question?
   - text: |
       Quelle est votre question?
 
@@ -90,76 +65,76 @@ responses:
 
 # Pour les questions en lien avec l'admission ---------------------------------
 
-  utter_ask_demande_admission:
+  utter_faq/ask_demande_admission:
   - text: |
       Vous pouvez faire une demande d'admission papier ou en ligne.
-  utter_ask_etapes_admission:
+  utter_faq/ask_etapes_admission:
   - text: |
       Quelles sont les etapes pour faire une demande d'admission?
-  utter_ask_nombre_programmes:
+  utter_faq/ask_nombre_programmes:
   - text: |
       Combien de programmes peut-on choisir?
-  utter_ask_pieces_admission:
+  utter_faq/ask_pieces_admission:
   - text: |
       Pour connaître les pièces requises pour l'admission au programme de votre choix, allez au "http://uqo.ca/etudiants/admission/pieces"
-  utter_ask_dates_limites_admission:
+  utter_faq/ask_dates_limites_admission:
   - text: |
       Pour consulter les dates limites d'admission, allez au "http://uqo.ca/etudiants/admission/dates-limites-admission"
-  utter_ask_frais_admission:
+  utter_faq/ask_frais_admission:
   - text: |
       Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
-  utter_ask_modalite_admission:
+  utter_faq/ask_modalite_admission:
   - text: |
       Pour connaître les modalités de paiement de l'UQO, allez au "https://uqo.ca/fraisdescolarite/modalites-paiement-demande-dadmission"  utter_ask_besoins_admissions
-  utter_ask_perdu_preuve_admission:
+  utter_faq/ask_perdu_preuve_admission:
   - text: |
       J'ai perdu ma preuve de reception
-  utter_ask_formation_candidats_non_quebecois_admission:
+  utter_faq/ask_formation_candidats_non_quebecois_admission:
   - text: |
       Niveaux de formation pour l'admission generale des candidats non quebecois?
-  utter_ask_non_dec_admission:
+  utter_faq/ask_non_dec_admission:
   - text: |
       Puis-je être admis à l’UQO si je n’ai pas encore obtenu mon DEC?
-  utter_ask_delai_dec_admission:
+  utter_faq/ask_delai_dec_admission:
   - text: |
       Que dois-je faire pour obtenir un délai additionnel pour l’obtention de mon DEC?
-  utter_ask_delai_depasse_dec_admission:
+  utter_faq/ask_delai_depasse_dec_admission:
   - text: |
       Qu’arrive-t-il si, après mon delai de 12 mois, je n’ai toujours pas obtenu mon DEC?
-  utter_ask_reconnaissance_acquis_admission:
+  utter_faq/ask_reconnaissance_acquis_admission:
   - text: |
       Ai-je droit a une reconnaissance des acquis?
-  utter_ask_entente_dec_bac_admission:
+  utter_faq/ask_entente_dec_bac_admission:
   - text: |
       Existe-t-il une passerelles et ententes DEC-BAC pour mon programme?
-  utter_ask_demande_reconnaissances_acquis_admission:
+  utter_faq/ask_demande_reconnaissances_acquis_admission:
   - text: |
       Quelle est la procedure a suivre pour la demande de reconnaissances des acquis?
-  utter_ask_date_limite_reconnaissance_acquis:
+  utter_faq/ask_date_limite_reconnaissance_acquis:
   - text: |
       Quelle est la date limite pour la demande de reconnaissances des acquis?
-  utter_ask_frais_depot_demande_reconnaissance:
+  utter_faq/ask_frais_depot_demande_reconnaissance:
   - text: |
       Quels sont les frais pour le depot de la demande de reconnaissances des acquis?
-  utter_ask_liste_programmes_admission:
+  utter_faq/ask_liste_programmes_admission:
   - text: |
       Quels sont les programmes de l'UQO?
-  utter_ask_transfert_procedure_admission:
+  utter_faq/ask_transfert_procedure_admission:
   - text: |
       Quelle est la procedure de transfert entre campus?
-  utter_ask_diplome_etranger_admission:
+  utter_faq/ask_diplome_etranger_admission:
   - text: |
       Est-ce que mon diplome de mon pays me rendent admissible a un programme d'etude?
-  utter_ask_etudiant_international:
+  utter_faq/ask_etudiant_international:
   - text: |
       Je suis un etudiant international?
-  utter_ask_decision_admission:
+  utter_faq/ask_decision_admission:
   - text: |
       Quand puis-je m'attendre a recevoir ma decision d'admission/
-  utter_ask_types_admission:
+  utter_faq/ask_types_admission:
   - text: |
       Quels sont les types d'admission a l'UQO?
-  utter_ask_choix_cours_admission:
+  utter_faq/ask_choix_cours_admission:
   - text: |
       Comment faire son choix de cours?
 
@@ -168,29 +143,29 @@ responses:
 actions:
 - utter_greet
 - utter_help
-- utter_affirm
+# - utter_affirm
 - utter_goodbye
-- utter_ask_demande_admission
-- utter_ask_etapes_admission
-- utter_ask_nombre_programmes
-- utter_ask_pieces_admission
-- utter_ask_dates_limites_admission
-- utter_ask_frais_admission
-- utter_ask_modalite_admission
-- utter_ask_perdu_preuve_admission
-- utter_ask_formation_candidats_non_quebecois_admission
-- utter_ask_non_dec_admission
-- utter_ask_delai_dec_admission
-- utter_ask_delai_depasse_dec_admission
-- utter_ask_reconnaissance_acquis_admission
-- utter_ask_entente_dec_bac_admission
-- utter_ask_demande_reconnaissances_acquis_admission
-- utter_ask_date_limite_reconnaissance_acquis
-- utter_ask_frais_depot_demande_reconnaissance
-- utter_ask_liste_programmes_admission
-- utter_ask_transfert_procedure_admission
-- utter_ask_diplome_etranger_admission
-- utter_ask_etudiant_international
-- utter_ask_decision_admission
-- utter_ask_types_admission
-- utter_ask_choix_cours_admission
+- utter_faq/ask_demande_admission
+- utter_faq/ask_etapes_admission
+- utter_faq/ask_nombre_programmes
+- utter_faq/ask_pieces_admission
+- utter_faq/ask_dates_limites_admission
+- utter_faq/ask_frais_admission
+- utter_faq/ask_modalite_admission
+- utter_faq/ask_perdu_preuve_admission
+- utter_faq/ask_formation_candidats_non_quebecois_admission
+- utter_faq/ask_non_dec_admission
+- utter_faq/ask_delai_dec_admission
+- utter_faq/ask_delai_depasse_dec_admission
+- utter_faq/ask_reconnaissance_acquis_admission
+- utter_faq/ask_entente_dec_bac_admission
+- utter_faq/ask_demande_reconnaissances_acquis_admission
+- utter_faq/ask_date_limite_reconnaissance_acquis
+- utter_faq/ask_frais_depot_demande_reconnaissance
+- utter_faq/ask_liste_programmes_admission
+- utter_faq/ask_transfert_procedure_admission
+- utter_faq/ask_diplome_etranger_admission
+- utter_faq/ask_etudiant_international
+- utter_faq/ask_decision_admission
+- utter_faq/ask_types_admission
+- utter_faq/ask_choix_cours_admission

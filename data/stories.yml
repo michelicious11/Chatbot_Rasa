@@ -1,10 +1,17 @@
 stories:
- - story: greet and help
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: help
-   - action: utter_affirm
-   - intent: bye
-   - action: utter_goodbye
+- story: greet and help
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
 
+- story: finish
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- story: finish
+  steps:
+  - intent: bye
+  - action: utter_goodbye

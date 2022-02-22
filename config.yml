@@ -18,6 +18,9 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: faq
 
 policies:
   - name: MemoizationPolicy
