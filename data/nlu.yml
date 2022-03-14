@@ -51,51 +51,54 @@ nlu:
 - intent: faq/ask_perdu_preuve_admission
   examples: |
     - J'ai perdu ma preuve de reception
+    - Comment récupérer la preuve de reception ?
 - intent: faq/ask_formation_candidats_non_quebecois_admission
   examples: |
     - Niveaux de formation pour l'admission generale des candidats non quebecois?
+    - Est-ce que mon [diplome](admission) de mon (pays) me rendent admissible a un programme d'etude?
 - intent: faq/ask_non_dec_admission
   examples: |
-    - Puis-je être admis à l’UQO si je n’ai pas encore obtenu mon [DEC](admission)?
+    - Puis-je être admis à l'UQO si je n'ai pas encore obtenu mon [DEC](admission)?
 - intent: faq/ask_delai_dec_admission
   examples: |
-    - Que dois-je faire pour obtenir un délai additionnel pour l’obtention de mon DEC?
+    - Que dois-je faire pour obtenir un délai additionnel pour l'obtention de mon [DEC](admission)?
 - intent: faq/ask_delai_depasse_dec_admission
   examples: |
-    - Qu’arrive-t-il si, après mon delai de [12 mois](admission), je n’ai toujours pas obtenu mon [DEC](admission)?
+    - Qu'arrive-t-il si, après mon delai de [12 mois](admission), je n'ai toujours pas obtenu mon [DEC](admission)?
+- intent: faq/ask_contacter_dec_admission
+  examples: |
+    - Qui puis-je contacter si j'ai besoin de plus d'information au sujet de l'(admission) conditionnelle à l'obtention du [DEC]?
 - intent: faq/ask_reconnaissance_acquis_admission
   examples: |
     - Ai-je droit a une reconnaissance des [acquis](admission)?
 - intent: faq/ask_entente_dec_bac_admission
   examples: |
-    - Existe-t-il une passerelles et ententes DEC-BAC pour mon programme?
+    - Existe-t-il une passerelles et ententes [DEC]-[BAC] pour mon programme?
 - intent: faq/ask_demande_reconnaissances_acquis_admission
   examples: |
-    - Quelle est la procedure a suivre pour la demande de reconnaissances des [acquis](admission)?
+    - Quelle est la procedure a suivre pour la demande de [reconnaissances des acquis](admission)?
 - intent: faq/ask_date_limite_reconnaissance_acquis
   examples: |
-    - Quelle est la date limite pour la demande de reconnaissances des acquis?
+    - Quelle est la date limite pour la demande de [reconnaissances des acquis](admission)?
 - intent: faq/ask_frais_depot_demande_reconnaissance
   examples: |
-    - Quels sont les frais pour le depot de la demande de reconnaissances des acquis?
+    - Quels sont les [frais](finances) pour le depot de la demande de [reconnaissances des acquis](admission)?
+    - Combien coute les [droits](finances) une [reconnaissances des acquis](admission)?
 - intent: faq/ask_liste_programmes_admission
   examples: |
     - Quels sont les programmes de l'(UQO)?
 - intent: faq/ask_transfert_procedure_admission
   examples: |
     - Quelle est la procedure de transfert entre [campus](UQO)?
-- intent: faq/ask_diplome_etranger_admission
-  examples: |
-    - Est-ce que mon [diplome](admission) de mon (pays) me rendent admissible a un programme d'etude?
 - intent: faq/ask_etudiant_international
   examples: |
-    - Je suis un etudiant international?
+    - Je suis un étudiant international?
 - intent: faq/ask_decision_admission
   examples: |
-    - Quand puis-je m'attendre a recevoir ma decision d'admission?
+    - Quand puis-je m'attendre a recevoir ma decision d'(admission)?
 - intent: faq/ask_types_admission
   examples: |
-    - Quels sont les types d'admission a l'UQO?
+    - Quels sont les types d'(admission) a l'(UQO)?
 - intent: faq/ask_choix_cours_admission
   examples: |
     - Comment faire son choix de cours?

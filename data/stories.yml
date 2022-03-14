@@ -6,7 +6,7 @@ stories:
   - intent: help
   - action: utter_help
 
-- story: finish
+- story: faq
   steps:
   - intent: faq
   - action: utter_faq
