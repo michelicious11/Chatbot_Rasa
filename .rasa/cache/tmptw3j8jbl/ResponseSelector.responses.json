@@ -1,0 +1,122 @@
+{
+  "utter_faq/ask_demande_admission": [
+    {
+      "text": "Vous pouvez faire une demande d'admission papier ou en ligne.\n"
+    }
+  ],
+  "utter_faq/ask_etapes_admission": [
+    {
+      "text": "Plusieurs étapes sont à suivre pour faire une demande d'admission, de choisir \nun programme et consulter les conditions d'admission, jusqu'à valider l'admission \npar une inscription, faire une demande de reconnaissance des acquis et communiquer \navec le SESH pour avoir accès à des mesures d'accomodement. Vous trouverez tout les \ndétails au \"https://uqo.ca/etudiants/etapes-suivre-pour-faire-une-demande-dadmission\".\n"
+    }
+  ],
+  "utter_faq/ask_nombre_programmes": [
+    {
+      "text": "Vous avez le choix parmi 191 programmes. Pour plus d'informations, Veuillez consulter \nla Banque de programmes au \"https://etudier.uqo.ca/programmes\"\n"
+    }
+  ],
+  "utter_faq/ask_pieces_admission": [
+    {
+      "text": "Pour connaître les pièces requises pour l'admission au programme de votre choix, allez \nau \"http://uqo.ca/etudiants/admission/pieces\"\n"
+    }
+  ],
+  "utter_faq/ask_dates_limites_admission": [
+    {
+      "text": "Pour consulter les dates limites d'admission, allez au \"http://uqo.ca/etudiants/admission/dates-limites-admission\"\n"
+    }
+  ],
+  "utter_faq/ask_frais_admission": [
+    {
+      "text": "Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.\n"
+    }
+  ],
+  "utter_faq/ask_modalite_admission": [
+    {
+      "text": "Pour connaître les modalités de paiement de l'UQO, allez au \"https://uqo.ca/fraisdescolarite/modalites-paiement-demande-dadmission\"\n"
+    }
+  ],
+  "utter_faq/ask_perdu_preuve_admission": [
+    {
+      "text": "Ce n'est pas grave. Une copie de cette preuve de réception a déjà été envoyé à l'adresse \ncourriel que vous avez fournie dans votre demande d'admission. Nous vous suggérons donc \nde vérifier votre boîte de courriers indésirables, car il est possible que le filtre de \nvotre messagerie électronique redirige ce courriel dans vos courriers indésirables \ns'il ne reconnaît pas l'expéditeur. Referez vous à l'étape 7 du lien \nsuivant \"https://uqo.ca/etudiants/etapes-suivre-pour-faire-une-demande-dadmission\".\n"
+    }
+  ],
+  "utter_faq/ask_formation_candidats_non_quebecois_admission": [
+    {
+      "text": "Pour savoir si le ou les diplômes obtenus dans votre pays vous rendent admissible au programme \nd'études qui vous intéressent, consulter le Guide des niveaux de formation pour l'admission \ngénérale des candidats non québécois au \"https://uqo.ca/etudiants/admission-etudiants-internationaux\", rubrique Informations Utiles.\n"
+    }
+  ],
+  "utter_faq/ask_non_dec_admission": [
+    {
+      "text": "Selon la politique d'admission conditionnelle à l'obtention du DEC appliquée par l'UQO, vous devez fournir \nla preuve de l'obtention de votre diplôme d'études collégiales (DEC) avant le début du premier trimestre \nauquel vous êtes inscrit. Si vous ne croyez pas être en mesure d'obtenir votre DEC avant le début du trimestre, \nil vous sera tout de même possible de commencer vos études et d'obtenir un délai additionnel d'au plus deux \ntrimestres pour obtenir votre DEC, mais seulement s'il ne vous manque qu'un seul élément parmi les deux suivants :\nUn cours (lié ou non à la réussite de l'épreuve synthèse de programme) ou L'épreuve uniforme de français, langue \nd'enseignement et littérature (sauf pour les admis aux programmes du module de l'éducation et du module des lettres, \nceux-ci doivent réussir l'épreuve uniforme de français avant de commencer leurs études à l'UQO).\nAucun délai additionnel pour l'obtention du DEC ne sera accordé aux étudiants libres (9999), ni aux étudiants \nadmis au DEC-BAC en sciences infirmières (7455) ou au certificat en soins infirmiers (4356). \nDe plus, si vous avez déjà bénéficié d'un délai additionnel pour obtenir votre DEC, il n'est pas possible de \nvous prévaloir à nouveau de la politique.\n"
+    }
+  ],
+  "utter_faq/ask_delai_dec_admission": [
+    {
+      "text": "Vous devez vous assurez qu'il ne vous manque qu'un seul élément pour l'obtention de votre DEC, soit un cours \nou l'épreuve uniforme de français, langue d'enseignement et littérature.\nAprès cela, vous devez remplir la partie 1 du Formulaire de demande de délai pour l'obtention du \nDEC \"https://uqo.ca/docs/22437\" et faire remplir la partie 2 du même formulaire par votre aide pédagogique individuelle \n(API) du cégep; puis nous faire parvenir le formulaire au plus tard une semaine après le début du trimestre d'admission. \nPar courriel au \"admission@uqo.ca\", par télécopieur au \"819 773-1835\" ou en personne :\nà Gatineau, Bureau du registraire B-0150 au 101, rue Saint-Jean-Bosco, Gatineau (Québec) \nou \nà Saint-Jérôme, Guichet étudiant/Info-campus, bureau J-0300 au 5, rue Saint-Joseph, Saint-Jérôme (Québec)\n"
+    }
+  ],
+  "utter_faq/ask_delai_depasse_dec_admission": [
+    {
+      "text": "Si vous ne respectez pas le délai qui vous a été accordé, vous ne pourrez plus poursuivre vos études à l'UQO au-delà de ce délai. \nSi vous vous êtes inscrit à des cours au-delà de ce délai, ceux-ci seront annulés avec remboursement, et ce, même si le trimestre \nuniversitaire est commencé depuis plusieurs semaines. Pour plus de détails, consultez \"https://uqo.ca/etudiants/admission-conditionnelle-dec\".\n"
+    }
+  ],
+  "utter_faq/ask_contacter_dec_admission": [
+    {
+      "text": "Toutes vos questions concernant l'admission conditionnelle à l'obtention du DEC doivent être envoyées directement au service \nde l'admission par courriel à \"admission@uqo.ca\", car lui seul est autorisé à accorder ou refuser un délai pour l'obtention de votre DEC. \nNous vous conseillons de ne pas attendre à la rentrée scolaire pour poser vos questions afin d'éviter le retrait de votre programme \nparce que vous n'avez pas obtenu votre DEC ou parce que vous ne répondez pas aux conditions pour l'obtention d'un délai.\n"
+    }
+  ],
+  "utter_faq/ask_reconnaissance_acquis_admission": [
+    {
+      "text": "Vous pouvez faire une demande de reconnaissance des acquis si vous remplissez au moins une des conditions suivantes : \n- vous avez déjà complété un programme d'études à l'UQO; \n- vous avez déjà suivi des cours dans une autre université; \n- vous avez terminé un D.E.C. technique de trois (3) années; \n- vous possédez de l'expérience professionnelle en lien avec le programme d'études auquel vous êtes inscrit.\n"
+    }
+  ],
+  "utter_faq/ask_entente_dec_bac_admission": [
+    {
+      "text": "Pour vérifier s'il existe des passerelles de reconnaissance des acquis ou une entente DEC-BAC entre votre D.E.C technique \net les programmes de l'UQO, consultez le catalogue des passerelles et ententes DEC-BAC de l'UQO sur le lien suivant : \n\"https://etudier.uqo.ca/rac\".\nPar contre, s'il n'existe pas de passerelles pour votre programme, vous pouvez communiquer avec votre instance responsable, \nsoit votre module ou votre département, en consultant les coordonnées sur le lien suivant : https://uqo.ca/departements-modules. \n"
+    }
+  ],
+  "utter_faq/ask_demande_reconnaissances_acquis_admission": [
+    {
+      "text": "Veuillez consulter la rubrique \"Procédure à suivre pour la demande de reconnaissance des acquis\" au \n\"https://uqo.ca/etudiants/admission/reconnaissance-des-acquis\".\n"
+    }
+  ],
+  "utter_faq/ask_date_limite_reconnaissance_acquis": [
+    {
+      "text": "Veuillez consulter la rubrique \"Date limites\" au \n\"https://uqo.ca/etudiants/admission/reconnaissance-des-acquis\".\n"
+    }
+  ],
+  "utter_faq/ask_frais_depot_demande_reconnaissance": [
+    {
+      "text": "Vous devez vous acquiter de 50 $ pour le dépôt de la demande de reconnaissance des acquis. \nCrédits reconnus par voie de l'expérience professionnelle ou par des cours suivis dans un \nétablissement à l'extérieur du Canada et des États-Unis : 50 $ par cours reconnu. Plus\nd'informations sur \"https://uqo.ca/etudiants/admission/reconnaissance-des-acquis\", rubrique \"Frais\".\n"
+    }
+  ],
+  "utter_faq/ask_liste_programmes_admission": [
+    {
+      "text": "Vous trouverez la liste complète des programmes qui sont offert à l'UQO sur \"https://etudier.uqo.ca/programmes\". \n"
+    }
+  ],
+  "utter_faq/ask_transfert_procedure_admission": [
+    {
+      "text": "Le Bureau du registraire a mis en place une procédure de transfert entre les campus pour les étudiants \nqui désirent poursuivre leurs études dans le même programme, mais pas au même campus auquel ils ont \ninitialiement été admis. Pour plus de détails, veuillez consulter \"https://uqo.ca/etudiants/transfert-entre-campus\".\n"
+    }
+  ],
+  "utter_faq/ask_etudiant_international": [
+    {
+      "text": "Vous trouverez toutes les informations utiles concernant le processus d'admission des étudiants internationaux \nau \"https://uqo.ca/etudiants/admission/etudiants-internationaux\".\n"
+    }
+  ],
+  "utter_faq/ask_decision_admission": [
+    {
+      "text": "Pour le trimestre d'automne, c'est à partir du mois de janvier pour les programmes non contingentés et à partir \nde la fin du mois de mars pour les programmes contingentés.\nPour le trimestre d'été, c'est à partir du mois de janvier.\nPour le trimestre d'hiver, c'est à partir du mois de juillet.\nVeuillez Notez que ces délais sont approximatifs; nous ne pouvons pas préciser le délai exact à l'intérieur duquel \nvous recevrez votre réponse.\n"
+    }
+  ],
+  "utter_faq/ask_types_admission": [
+    {
+      "text": "Il y a quatre types d'admission:\n- Admission définitive;\n- Admission conditionnelle;\n- Liste d'attente;\n- Refus.\nPour plus d'informations, référez vous à l'étape 8 dans \"https://uqo.ca/etudiants/etapes-suivre-pour-faire-une-demande-dadmission\".\n"
+    }
+  ],
+  "utter_faq/ask_choix_cours_admission": [
+    {
+      "text": "Lorsque vous aurez été admis définitivement ou conditionnellement dans votre programme d'études, vous pourrez procéder à l'inscription \nà vos cours en vous connectant à votre portail étudiant sur \"https://uqo.ca/user\". Ce site vous permettra d'y trouver toute l'information dont vous aurez besoin \npour votre démarche d'inscription. Veuillez consulter \"https://uqo.ca/inscription\" pour plus de détails.\n"
+    }
+  ]
+}

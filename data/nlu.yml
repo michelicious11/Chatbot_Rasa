@@ -44,6 +44,7 @@ nlu:
   examples: |
     - Combien sont les [droits](finances) d'(admission)?
     - Combien coute les [frais](finances) d'(admission)?
+    - Quels sont les [frais](finances) d'(admission)?
 - intent: faq/ask_modalite_admission
   examples: |
     - Quelles sont les [modalites](finances) de [paiement](finances) pour les droits d'admission?
