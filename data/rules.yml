@@ -3,3 +3,4 @@ rules:
     steps:
     - intent: faq
     - action: utter_faq
+    - action: action_save_convo

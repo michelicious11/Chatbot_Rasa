@@ -10,8 +10,10 @@ stories:
   steps:
   - intent: faq
   - action: utter_faq
+  - action: action_save_convo
 
 - story: finish
   steps:
   - intent: bye
   - action: utter_goodbye
+  - action: action_save_convo

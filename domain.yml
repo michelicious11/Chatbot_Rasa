@@ -235,3 +235,4 @@ actions:
 - utter_faq/ask_decision_admission
 - utter_faq/ask_types_admission
 - utter_faq/ask_choix_cours_admission
+- action_save_convo
