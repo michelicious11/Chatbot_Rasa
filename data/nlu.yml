@@ -103,3 +103,10 @@ nlu:
 - intent: faq/ask_choix_cours_admission
   examples: |
     - Comment faire son choix de cours?
+#Inserer d'autres intents
+- intent: send_email
+  examples: |
+    - I want to to send email
+    - Send an email
+    - Send email
+    - email

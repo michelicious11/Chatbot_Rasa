@@ -20,6 +20,12 @@ slots:
     mappings:
     - type: from_entity
       entity: services
+    email:
+      type: text
+    subject:
+      type: text
+    message:
+      type: text
 
 intents:
 # general
@@ -28,6 +34,7 @@ intents:
 - bye
 # admission
 - faq
+- send_email
 
 # Reponse ----------------------------------------------------------------
 responses:
@@ -39,13 +46,14 @@ responses:
   - text: |
       Salut! Que puis-je faire pour vous?
 
-#   utter_affirm:
-#   - text: |
-#       Avec plaisir!
-#   - text: |
-#       Pas de problème!
-#   - text: |
-#       Oui, bien sûr!
+  utter_ask_email:
+  - text: Veuillez fournir votre adresse courriel.
+
+  utter_ask_subject:
+  - text: Veuillez indiquer l'objet de votre courriel.
+
+  utter_ask_message:
+  - text: Veuillez fournir le message pour votre courriel.
 
   utter_help:
   - text: |
@@ -236,3 +244,15 @@ actions:
 - utter_faq/ask_types_admission
 - utter_faq/ask_choix_cours_admission
 - action_save_convo
+- action_submit
+
+
+
+forms:
+  email_form:
+    email:
+    - type: from_text
+    subject:
+    - type: from_text
+    message:
+    - type: from_text
