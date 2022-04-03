@@ -47,13 +47,16 @@ responses:
       Salut! Que puis-je faire pour vous?
 
   utter_ask_email:
-  - text: Veuillez fournir votre adresse courriel.
+  - text: |
+      Veuillez fournir votre adresse courriel.
 
   utter_ask_subject:
-  - text: Veuillez indiquer l'objet de votre courriel.
+  - text: |
+      Veuillez indiquer l'objet de votre courriel.
 
   utter_ask_message:
-  - text: Veuillez fournir le message pour votre courriel.
+  - text: |
+      Veuillez fournir le message pour votre courriel.
 
   utter_help:
   - text: |
@@ -217,7 +220,6 @@ responses:
 actions:
 - utter_greet
 - utter_help
-# - utter_affirm
 - utter_goodbye
 - utter_faq/ask_demande_admission
 - utter_faq/ask_etapes_admission
