@@ -1,3 +1,5 @@
+version: "2.0"
+
 rules:
   - rule: respond to FAQs
     steps:
@@ -6,10 +8,10 @@ rules:
     - action: action_save_convo
 
   - rule: Activate Form
-  steps:
-    - intent: send_email
-    - action: email_form
-    - active_loop: email_form
+    steps:
+      - intent: send_email
+      - action: email_form
+      - active_loop: email_form
 
   - rule: Submit form
     condition:

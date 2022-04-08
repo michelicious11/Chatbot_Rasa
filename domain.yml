@@ -1,4 +1,4 @@
-version: '3.0'
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -17,15 +17,12 @@ slots:
       - Centre sportif
       - Bibliotheque
       - SESH
-    mappings:
-    - type: from_entity
-      entity: services
-    email:
-      type: text
-    subject:
-      type: text
-    message:
-      type: text
+  email:
+        type: text
+  subject:
+        type: text
+  message:
+        type: text
 
 intents:
 # general
@@ -247,7 +244,6 @@ actions:
 - utter_faq/ask_choix_cours_admission
 - action_save_convo
 - action_submit
-
 
 
 forms:

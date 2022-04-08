@@ -122,7 +122,7 @@ def SendEmail(toaddr,subject,message):
 
     # Authentication
     try:
-        s.login(fromaddr, "password")
+        s.login(fromaddr, "8esCkfWZx6sGR9a&")
 
         # Converts the Multipart msg into a string
         text = msg.as_string()

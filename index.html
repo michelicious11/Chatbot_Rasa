@@ -1,21 +1,55 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <title>AutochatUQO</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+        
+        section {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        p {
+            font-size: 2rem;
+        }
+    </style>
+</head>
 
 <body>
+    <div class = "center">
+        <h1>Autochat UQO ChatBot</h1>
+        <p>Veuillez cliquer sur l'icône Chat pour commencer </p>
+    </div>
     <div id="chat-container"></div>
 
     <script src="./script.js"></script>
 
     <script>
-        createChatBot(host = 'http://localhost:5005/webhooks/rest/webhook',
+        createChatBot(host = 'https://f417-129-153-57-126.ngrok.io/webhooks/rest/webhook',
             botLogo = "./botLogo.svg",
             title = "AutochatUQO ", welcomeMessage = "Bonjour!",
             inactiveMsg = "Le service est hors ligne. Veuillez contacter votre administrateur. ",
             theme = "blue ")
     </script>
 </body>
-</head>
+
 
 </html>

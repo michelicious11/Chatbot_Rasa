@@ -199,6 +199,10 @@
     transition: opacity 0.3s; */
 }
 
+.center {
+    text-align: center;
+    }
+
 @media (max-width:500px) {
     .chat-popup {
         bottom: 120px;
