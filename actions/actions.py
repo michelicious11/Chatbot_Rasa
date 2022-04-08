@@ -128,7 +128,8 @@ def SendEmail(toaddr,subject,message):
         text = msg.as_string()
 
         # sending the mail
-        s.sendmail(fromaddr, toaddr, text)
+        s.sendmail(fromaddr, toaddr, "Nous avons bien reçu votre requête.\n Voici votre message: " +"\""+text+"\""+ "\nNous vous répondons dans les prochaines 48h.\n Merci.")
+        s.sendmail(fromaddr, fromaddr, "Vous avez reçu une nouvelle requête de la part de {toaddr}.\n"+"\""+text+"\"")
     except:
         print("Une erreur s'est produite lors de l'envoi du courriel. Veuillez réessayer ultérieurement.")
     finally:
