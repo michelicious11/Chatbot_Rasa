@@ -1,0 +1,24 @@
+
+outofscope,
+une pizza s'il vous plait,
+
+,
+,
+
+utter_outofscope,
+Désolé, je ne comprends pas votre requête. Pourriez-vous la reformuler s'il vous plaît ?
+
+
+faq,
+quelle sont les etapes de l'admission,
+
+,
+,
+
+utter_faq/ask_etapes_admission,
+Plusieurs étapes sont à suivre pour faire une demande d'admission, de choisir 
+un programme et consulter les conditions d'admission, jusqu'à valider l'admission 
+par une inscription, faire une demande de reconnaissance des acquis et communiquer 
+avec le SESH pour avoir accès à des mesures d'accomodement. Vous trouverez tout les 
+détails au "https://uqo.ca/etudiants/etapes-suivre-pour-faire-une-demande-dadmission".
+

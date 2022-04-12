@@ -8,12 +8,12 @@
 # This is a simple example for a custom action which utters "Hello World!"
 import os
 import time
-import smtplib
+from pathlib import Path
 from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+from rasa_sdk.types import DomainDict
+from utils.utils import get_html_data, send_email
 
 class ActionSaveConvo(Action):
     def name(self) -> Text:
@@ -57,81 +57,79 @@ class ActionSaveConvo(Action):
         return []
 
 
-class ActionSubmit(Action):
+class ValidateContactUsForm(FormValidationAction):
     def name(self) -> Text:
-        return "action_submit"
+        return "validate_contact_us_form"
+
+    def validate_name(
+        self,
+        value: Text,
+        dispatcher: "CollectingDispatcher",
+        tracker: "Tracker",
+        domain: "DomainDict",
+    ) -> Dict[str, str]:
+        if value is not None:
+            return {"name": value}
+        else:
+            return {"requested_slot": "name"}
+
+    def validate_email(
+        self,
+        value: Text,
+        dispatcher: "CollectingDispatcher",
+        tracker: "Tracker",
+        domain: "DomainDict",
+    ) -> Dict[str, str]:
+        if value is not None:
+            return {"email": value}
+        else:
+            return {"requested_slot": "email"}
+
+
+    def validate_confirm_details(
+        self,
+        value: Text,
+        dispatcher: "CollectingDispatcher",
+        tracker: "Tracker",
+        domain: "DomainDict",
+    ) -> Dict[str, str]:
+        intent_name = tracker.get_intent_of_latest_message()
+        if value is not None:
+            if intent_name in ["affirm", "deny"]:
+                return {"confirm_details": intent_name}
+        else:
+            return {"requested_slot": "confirm_details"}
+
+
+class ActionSubmitContactForm(Action):
+    def name(self) -> Text:
+        return "action_submit_contact_us_form"
 
     def run(
         self,
-        dispatcher,
+        dispatcher: "CollectingDispatcher",
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        SendEmail(
-            tracker.get_slot("email"),
-            tracker.get_slot("subject"),
-            tracker.get_slot("message")
-        )
-        dispatcher.utter_message("Merci d'avoir fourni les détails. Nous vous avons envoyé un courriel de confirmation à {}".format(tracker.get_slot("email")))
+        domain: "DomainDict",
+    ) -> List[Dict[Text, Any]]:
+        confirm_details = tracker.get_slot("confirm_details")
+        name = tracker.get_slot("name")
+        email = tracker.get_slot("email")
+        message = tracker.get_slot("message")
+        if confirm_details == "affirm":
+            this_path = Path(os.path.realpath(__file__))
+            user_content = get_html_data(f"{this_path.parent}/utils/user_mail.html")
+            send_email("Merci de nous avoir contacté", email, user_content)
+            admin_content = get_html_data(f"{this_path.parent}/utils/admin_mail.html")
+            admin_content.format(
+                name=name,
+                email=email,
+                message=message,
+            )
+            is_mail_sent = send_email(f"{email.split('@')[0]} nous a contacté!", email, admin_content)
+            if is_mail_sent:
+                dispatcher.utter_message(template="utter_mail_success")
+            else:
+                dispatcher.utter_message("Désolé, je n'ai pas pu envoyer de courriel. Veuillez réessayer plus tard.")
+        else:
+            dispatcher.utter_message(template="utter_mail_canceled")
         return []
-
-def SendEmail(toaddr,subject,message):
-    fromaddr = "chatbotuqotest@gmail.com"
-    # instance of MIMEMultipart
-    msg = MIMEMultipart()
-
-    # storing the senders email address
-    msg['From'] = fromaddr
-
-    # storing the receivers email address
-    msg['To'] = toaddr
-
-    # storing the subject
-    msg['Subject'] = subject
-
-    # string to store the body of the mail
-    body = message
-
-    # attach the body with the msg instance
-    msg.attach(MIMEText(body, 'plain'))
-
-    # open the file to be sent
-    # filename = "/home/ashish/Downloads/webinar_rasa2_0.png"
-    # attachment = open(filename, "rb")
-    #
-    # # instance of MIMEBase and named as p
-    # p = MIMEBase('application', 'octet-stream')
-    #
-    # # To change the payload into encoded form
-    # p.set_payload((attachment).read())
-    #
-    # # encode into base64
-    # encoders.encode_base64(p)
-    #
-    # p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
-    #
-    # # attach the instance 'p' to instance 'msg'
-    # msg.attach(p)
-
-    # creates SMTP session
-    s = smtplib.SMTP('smtp.gmail.com', 587)
-
-    # start TLS for security
-    s.starttls()
-
-
-    # Authentication
-    try:
-        s.login(fromaddr, "8esCkfWZx6sGR9a&")
-
-        # Converts the Multipart msg into a string
-        text = msg.as_string()
-
-        # sending the mail
-        s.sendmail(fromaddr, toaddr, "Nous avons bien reçu votre requête.\n Voici votre message: " +"\""+text+"\""+ "\nNous vous répondons dans les prochaines 48h.\n Merci.")
-        s.sendmail(fromaddr, fromaddr, "Vous avez reçu une nouvelle requête de la part de {toaddr}.\n"+"\""+text+"\"")
-    except:
-        print("Une erreur s'est produite lors de l'envoi du courriel. Veuillez réessayer ultérieurement.")
-    finally:
-        # terminating the session
-        s.quit()

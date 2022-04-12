@@ -17,3 +17,9 @@ stories:
   - intent: bye
   - action: utter_goodbye
   - action: action_save_convo
+  
+- story: contact us form
+  steps:
+  - intent: contact_us
+  - action: contact_us_form
+  - active_loop: contact_us_form

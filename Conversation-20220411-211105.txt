@@ -1,0 +1,10 @@
+
+outofscope,
+sakut,
+
+,
+,
+
+utter_outofscope,
+Désolé, je ne comprends pas votre requête. Pourriez-vous la reformuler s'il vous plaît ?
+

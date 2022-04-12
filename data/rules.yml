@@ -7,21 +7,26 @@ rules:
     - action: utter_faq
     - action: action_save_convo
 
-  - rule: Activate Form
+  - rule: out of scope
     steps:
-      - intent: send_email
-      - action: email_form
-      - active_loop: email_form
+    - intent: outofscope
+    - action: utter_outofscope
+    - action: action_save_convo
 
-  - rule: Submit form
+  - rule: Activate, contact us form
     condition:
-    # Condition that form is active.
-    - active_loop: email_form
+    - active_loop: null
     steps:
-    # Form is deactivated
-    - action: email_form
+    - intent: contact_us
+    - action: contact_us_form
+    - active_loop: contact_us_form
+
+  - rule: Deactivate contact us form
+    condition:
+    - active_loop: contact_us_form
+    steps:
+    - action: contact_us_form
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    # The actions we want to run when the form is submitted.
-    - action: action_submit
+    - action: action_submit_contact_us_form

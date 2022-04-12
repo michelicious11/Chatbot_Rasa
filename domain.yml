@@ -1,13 +1,14 @@
 version: '2.0'
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: false
+  carry_over_slots_to_new_session: true
 
 entities:
   - admission
   - finances
   - services
   - UQO
+  - email
 
 slots:
   choice:
@@ -17,21 +18,31 @@ slots:
       - Centre sportif
       - Bibliotheque
       - SESH
+  name:
+    type: text
+    influence_conversation: false
   email:
-        type: text
-  subject:
-        type: text
+    type: text
+    influence_conversation: false
   message:
-        type: text
+    type: text
+    influence_conversation: false
+  confirm_details:
+    type: any
+    influence_conversation: false
 
 intents:
 # general
 - greet
 - help
 - bye
+- affirm
+- deny
 # admission
 - faq
-- send_email
+- contact_us
+- outofscope
+
 
 # Reponse ----------------------------------------------------------------
 responses:
@@ -43,17 +54,40 @@ responses:
   - text: |
       Salut! Que puis-je faire pour vous?
 
+  utter_ask_name:
+  - text: |
+      Pourriez-vous s'il vous plaît me dire votre nom?
+
   utter_ask_email:
   - text: |
       Veuillez fournir votre adresse courriel.
 
-  utter_ask_subject:
-  - text: |
-      Veuillez indiquer l'objet de votre courriel.
-
   utter_ask_message:
   - text: |
       Veuillez fournir le message pour votre courriel.
+
+  utter_ask_confirm_details:
+  - buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+    text: |
+      Voici les informations saisis. Veuillez les confirmer ci-dessous:
+      
+      Nom: {name}
+      
+      Adresse Courriel: {email}
+      
+      Message: {message}
+
+  utter_mail_success:
+  - text: |
+      J'ai envoyé tous les détails à notre équipe. L'un des agents vous répondra dans les 48h.
+
+  utter_mail_canceled:
+  - text: |
+      J'ai annulé l'envoi du courriel. Avez-vous besoin d'aide pour autre chose ?
 
   utter_help:
   - text: |
@@ -62,6 +96,10 @@ responses:
       Sur quel sujet voulez-vous de l'information?
   - text: |
       Quelle est votre question?
+
+  utter_outofscope:
+  - text: |
+      Désolé, je ne comprends pas votre requête. Pourriez-vous la reformuler s'il vous plaît ?
 
   utter_goodbye:
   - text: |
@@ -243,14 +281,22 @@ actions:
 - utter_faq/ask_types_admission
 - utter_faq/ask_choix_cours_admission
 - action_save_convo
-- action_submit
-
+- validate_contact_us_form
+- action_submit_contact_us_form
 
 forms:
-  email_form:
-    email:
-    - type: from_text
-    subject:
-    - type: from_text
-    message:
-    - type: from_text
+  contact_us_form:
+    required_slots:
+      name:
+      - type: from_text
+      email:
+      - type: from_text
+      message:
+      - type: from_text
+      confirm_details:
+      - intent: affirm
+        value: yes
+        type: from_intent
+      - intent: deny
+        value: no
+        type: from_intent
