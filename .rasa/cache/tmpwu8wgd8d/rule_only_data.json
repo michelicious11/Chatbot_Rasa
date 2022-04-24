@@ -1,0 +1,6 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "form_enforce_yes_or_no"
+  ]
+}

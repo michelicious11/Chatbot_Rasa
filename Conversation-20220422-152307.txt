@@ -1,0 +1,146 @@
+
+greet,
+bonjour,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous assister aujourd'hui?
+
+
+greet,
+Bonjour,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous assister aujourd'hui?
+
+
+faq,
+Quels sont les programmes de l'uqo,
+admission,
+programmes,
+
+utter_faq/ask_nombre_programmes,
+Vous avez le choix parmi 191 programmes. Pour plus d'informations, Veuillez consulter 
+la Banque de programmes au "https://etudier.uqo.ca/programmes"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+oui,
+
+,
+,
+
+utter_satisfied,
+Avez vous besoin d'autre chose?
+
+
+affirm,
+oui,
+
+,
+,
+
+utter_help,
+Quelle est votre question?
+
+
+faq,
+Quelle est la date limite d'inscription,
+time,
+date,
+
+utter_faq/ask_transfert_procedure_admission,
+Le Bureau du registraire a mis en place une procédure de transfert entre les campus pour les étudiants 
+qui désirent poursuivre leurs études dans le même programme, mais pas au même campus auquel ils ont 
+initialiement été admis. Pour plus de détails, veuillez consulter "https://uqo.ca/etudiants/transfert-entre-campus".
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+greet,
+Bonjour,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous assister aujourd'hui?
+
+
+faq,
+QUels sont les programmes de l'uqo,
+admission,
+programmes,
+
+utter_faq/ask_nombre_programmes,
+Vous avez le choix parmi 191 programmes. Pour plus d'informations, Veuillez consulter 
+la Banque de programmes au "https://etudier.uqo.ca/programmes"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+oui,
+
+,
+,
+
+utter_satisfied,
+Avez vous besoin d'autre chose?
+
+
+affirm,
+oui,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+Quelle est la date limite d'admission,
+time,
+date,
+
+utter_faq/ask_dates_limites_admission,
+Pour consulter les dates limites d'admission, allez au "http://uqo.ca/etudiants/admission/dates-limites-admission"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+oui,
+
+,
+,
+
+utter_satisfied,
+Avez vous besoin d'autre chose?
+
+
+deny,
+non,
+
+,
+,
+
+utter_goodbye,
+À la prochaine!
+

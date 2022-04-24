@@ -1,0 +1,79 @@
+
+bye,
+Merci,
+
+,
+,
+
+utter_goodbye,
+Aurevoir!
+
+
+faq,
+je veux une vignette de stationnement,
+parking,
+stationnement,
+
+utter_faq/ask_obtention_vignette_uqo,
+Les permis sont vendus sur une base de « premier arrivé, premier servi » au comptoir de l'UQO.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+oui,
+
+,
+,
+
+utter_satisfied,
+Avez vous besoin d'autre chose?
+
+
+faq,
+quelle est la date limite d'inscription ?,
+time,
+date,
+
+utter_faq/ask_dates_limites_admission,
+Pour consulter les dates limites d'admission, allez au "http://uqo.ca/etudiants/admission/dates-limites-admission"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_unsatisfied,
+Avez vous besoin d'aide?
+
+
+deny,
+non,
+
+,
+,
+
+utter_goodbye,
+Aurevoir!
+
+
+faq,
+quelle est l'horaire de la bibliotheque,
+date,
+horaire,
+
+utter_faq/ask_heure_biblio,
+La bibliothèque est normalement ouverte de 8 h à 21 h 30 du lundi au jeudi, de 8 h à 18 h le vendredi et de 10 h à 17 h le weekend.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+

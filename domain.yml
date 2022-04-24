@@ -1,50 +1,68 @@
-version: '2.0'
+version: '3.1'
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
-
+  carry_over_slots_to_new_session: false
+intents:
+- bye
+- help
+- affirm
+- greet
+- faq
+- deny
+- contact_us
+- outofscope
+- bot_challenge
 entities:
-  - admission
-  - finances
-  - services
-  - UQO
-  - email
-
+- admission
+- biblio
+- date
+- email
+- finances
+- help
+- outside
+- parking
+- person
+- services
+- steps
+- sti
+- university
 slots:
   choice:
     type: categorical
+    influence_conversation: true
     values:
-      - Clinique de sante
-      - Centre sportif
-      - Bibliotheque
-      - SESH
+    - clinique de sante
+    - centre sportif
+    - bibliotheque
+    - sesh
+    mappings:
+    - type: custom
   name:
     type: text
     influence_conversation: false
+    mappings:
+    - type: custom
   email:
     type: text
     influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
   message:
     type: text
     influence_conversation: false
+    mappings:
+    - type: custom
   confirm_details:
     type: any
     influence_conversation: false
-
-intents:
-# general
-- greet
-- help
-- bye
-- affirm
-- deny
-# admission
-- faq
-- contact_us
-- outofscope
-
-
-# Reponse ----------------------------------------------------------------
+    mappings:
+    - type: custom
+  answer:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
 responses:
   utter_greet:
   - text: |
@@ -53,19 +71,18 @@ responses:
       Bonjour! Comment puis-je vous aider?
   - text: |
       Salut! Que puis-je faire pour vous?
-
+  utter_iamabot:
+  - text: |
+      Je suis un robot conversationnel programmé pour répondre à vos questions. Si vous voulez contacter un agent, tapez "courriel".
   utter_ask_name:
   - text: |
       Pourriez-vous s'il vous plaît me dire votre nom?
-
   utter_ask_email:
   - text: |
       Veuillez fournir votre adresse courriel.
-
   utter_ask_message:
   - text: |
       Veuillez fournir le message pour votre courriel.
-
   utter_ask_confirm_details:
   - buttons:
     - title: Yes
@@ -74,21 +91,18 @@ responses:
       payload: No
     text: |
       Voici les informations saisis. Veuillez les confirmer ci-dessous:
-      
-      Nom: {name}
-      
-      Adresse Courriel: {email}
-      
-      Message: {message}
 
+      Nom: {name}
+
+      Adresse Courriel: {email}
+
+      Message: {message}
   utter_mail_success:
   - text: |
-      J'ai envoyé tous les détails à notre équipe. L'un des agents vous répondra dans les 48h.
-
+      J'ai envoyé tous les détails à notre équipe. L'un des agents vous répondra sous peu.
   utter_mail_canceled:
   - text: |
       J'ai annulé l'envoi du courriel. Avez-vous besoin d'aide pour autre chose ?
-
   utter_help:
   - text: |
       Quel est l'objet de votre question?
@@ -96,11 +110,9 @@ responses:
       Sur quel sujet voulez-vous de l'information?
   - text: |
       Quelle est votre question?
-
   utter_outofscope:
   - text: |
       Désolé, je ne comprends pas votre requête. Pourriez-vous la reformuler s'il vous plaît ?
-
   utter_goodbye:
   - text: |
       Bonne journée!
@@ -108,9 +120,15 @@ responses:
       Aurevoir!
   - text: |
       À la prochaine!
-
-# Pour les questions en lien avec l'admission ---------------------------------
-
+  utter_satisfied:
+  - text: |
+      Avez vous besoin d'autre chose?
+  utter_unsatisfied:
+  - text: |
+      Avez vous besoin d'aide?
+  utter_feedback:
+  - text: |
+      Êtes-vous satisfait de la réponse?
   utter_faq/ask_demande_admission:
   - text: |
       Vous pouvez faire une demande d'admission papier ou en ligne.
@@ -140,7 +158,7 @@ responses:
       Pour connaître les modalités de paiement de l'UQO, allez au "https://uqo.ca/fraisdescolarite/modalites-paiement-demande-dadmission"
   utter_faq/ask_perdu_preuve_admission:
   - text: |
-      Ce n'est pas grave. Une copie de cette preuve de réception a déjà été envoyé à l'adresse 
+      Une copie de cette preuve de réception a déjà été envoyé à l'adresse 
       courriel que vous avez fournie dans votre demande d'admission. Nous vous suggérons donc 
       de vérifier votre boîte de courriers indésirables, car il est possible que le filtre de 
       votre messagerie électronique redirige ce courriel dans vos courriers indésirables 
@@ -243,60 +261,143 @@ responses:
       - Liste d'attente;
       - Refus.
       Pour plus d'informations, référez vous à l'étape 8 dans "https://uqo.ca/etudiants/etapes-suivre-pour-faire-une-demande-dadmission".
-
   utter_faq/ask_choix_cours_admission:
   - text: |
       Lorsque vous aurez été admis définitivement ou conditionnellement dans votre programme d'études, vous pourrez procéder à l'inscription 
       à vos cours en vous connectant à votre portail étudiant sur "https://uqo.ca/user". Ce site vous permettra d'y trouver toute l'information dont vous aurez besoin 
       pour votre démarche d'inscription. Veuillez consulter "https://uqo.ca/inscription" pour plus de détails.
-
-#Actions-------------------------------------------------------------------------
-
+  utter_faq/ask_frais_scolarite:
+  - text: |
+      Il existe un outil de simulation des frais de scolarité au lien suivant : "https://apps.uqo.ca/SimulationFraisEnLigne/"
+  utter_faq/ask_presentiel_non_presentiel:
+  - text: |
+      Que les activités d'enseignement soient offertes en présentiel, en mode hybride ou en non-présentiel, les frais de scolarité demeurent les mêmes.
+  utter_faq/ask_demande_financiere:
+  - text: |
+      Les nouvelles étudiantes et nouveaux étudiants peuvent effectuer une demande d'aide financière auprès du programme de l'Aide financière aux études (AFE) du gouvernement du Québec. Les formulaires sont disponibles au lien suivant : "http://www.afe.gouv.qc.ca/"
+  utter_faq/ask_bourses:
+  - text: |
+      Pour connaître tous les détails entourant chacune des bourses offertes par la Fondation, les futurs étudiants et étudiantes sont invités à consulter le lien suivant : "https://uqo.ca/fondation/programme-bourse"
+  utter_faq/ask_heure_biblio:
+  - text: |
+      La bibliothèque est normalement ouverte de 8 h à 21 h 30 du lundi au jeudi, de 8 h à 18 h le vendredi et de 10 h à 17 h le weekend.
+  utter_faq/ask_document_biblio:
+  - text: |
+      L'outil de recherche "Sofia" est la porte d'entrée vers l'ensemble des ressources de la bibliothèque: livres, revues, films et documentaires, articles, jeux, et bien plus encore.
+  utter_faq/ask_emprunt_biblio:
+  - text: |
+      Ayez votre carte étudiante en main pour emprunter tout type de document et de matériel.
+  utter_faq/ask_wifi_universite:
+  - text: |
+      Le réseau sans-fil "eduroam" est disponible à l'UQO. La procédure à suivre pour se connecter au réseau sans-fil est disponible au lien suivant: "https://uqo.ca/sti/eduroam-reseau-sans-fil-pour-etudiants-employes-wi-fi"
+  utter_faq/ask_centre_sportif:
+  - text: |
+      Le Centre sportif est ouvert tous les jours! Du lundi au vendredi de 6h30 à 20h et la fin de semaine de 8h à 17h.
+  utter_faq/ask_abonnement_centre_sportif:
+  - text: |
+      L'abonnement au Centre sportif se fait par téléphone au 819 595-2310 avec un paiement par Visa ou Mastercard ou en personne au 283 boulevard Alexandre-Taché, porte 23 avec paiement par Visa, Mastercard, débit ou comptant.
+  utter_faq/ask_montant_centre_sportif:
+  - text: |
+      Pour la clientèle régulière des 16 à 54 ans, l'abonnement mensuel coûte 75$, pour 4 mois 257$ et annuel 609$. 
+      Pour la clientèle régulière des 55 ans et plus, l'abonnement mensuel coûte 75$, pour 4 mois 234$ et annuel 528$. 
+      Pour la clientèle étudiante de l'UQO, l'abonnement mensuel coûte 72$ pour 4 mois et 180$ pour un an.
+  utter_faq/ask_horaire_sti:
+  - text: |
+      Lundi au jeudi : 8h à 22h
+      Vendredi : 8h à 20h
+      Samedi et dimanche : 8h30 à 11h30 et 12h30 à 16h
+  utter_faq/ask_demande_sti:
+  - text: |
+      Pour toute demande de soutien informatique vous pouvez composer le poste 2211 ou le numéro de téléphone 819-595-2211 ou créer une requête via le système de requêtes informatiques de l'UQO disponible à partir de votre portail de l'UQO ou par courriel à l'adresse "sti@uqo.ca".
+  utter_faq/ask_stationnement_uqo:
+  - text: |
+      Seuls les détenteurs de permis de stationnement émis par l'UQO peuvent stationner leur véhicule motorisé dans les parcs de stationnement de l'UQO. Des espaces contrôlés par des parcmètres sont aussi disponibles.
+  utter_faq/ask_obtention_vignette_uqo:
+  - text: |
+      Les permis sont vendus sur une base de « premier arrivé, premier servi » au comptoir de l'UQO.
+  utter_faq/ask_document_impot:
+  - text: |
+      Les relevés 8 (impôt provincial) et T2202 (impôt fédéral) pour votre déclaration de revenus sont disponibles via votre Dossier étudiant à la fin du mois de février de chaque année.
+  utter_faq/ask_casier_uqo:
+  - text: |
+      L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+  utter_faq/ask_liberer_casier:
+  - text: |
+      Vous devez libérer votre casier au plus tard le 30 juin après quoi l'UQO pourra en disposer.
+  utter_faq/ask_changer_programme:
+  - text: |
+      Un étudiant déjà inscrit à des cours et qui désire changer de programme ou d'orientation doit présenter, dans les délais fixés, une nouvelle demande d'admission.
+  utter_faq/ask_changer_info:
+  - text: |
+      Si vous changez d'adresse ou de numéro de téléphone, vous devez effectuer les modifications en utilisant le portail étudiant. 
+  utter_faq/ask_horaire_cours:
+  - text: |
+      Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
 actions:
-- utter_greet
-- utter_help
-- utter_goodbye
-- utter_faq/ask_demande_admission
-- utter_faq/ask_etapes_admission
-- utter_faq/ask_nombre_programmes
-- utter_faq/ask_pieces_admission
+- action_save_convo
+- action_submit_contact_us_form
+- utter_faq
+- utter_faq/ask_abonnement_centre_sportif
+- utter_faq/ask_bourses
+- utter_faq/ask_casier_uqo
+- utter_faq/ask_centre_sportif
+- utter_faq/ask_changer_info
+- utter_faq/ask_changer_programme
+- utter_faq/ask_choix_cours_admission
+- utter_faq/ask_contacter_dec_admission
+- utter_faq/ask_date_limite_reconnaissance_acquis
 - utter_faq/ask_dates_limites_admission
-- utter_faq/ask_frais_admission
-- utter_faq/ask_modalite_admission
-- utter_faq/ask_perdu_preuve_admission
-- utter_faq/ask_formation_candidats_non_quebecois_admission
-- utter_faq/ask_non_dec_admission
+- utter_faq/ask_decision_admission
 - utter_faq/ask_delai_dec_admission
 - utter_faq/ask_delai_depasse_dec_admission
-- utter_faq/ask_contacter_dec_admission
-- utter_faq/ask_reconnaissance_acquis_admission
-- utter_faq/ask_entente_dec_bac_admission
+- utter_faq/ask_demande_admission
+- utter_faq/ask_demande_financiere
 - utter_faq/ask_demande_reconnaissances_acquis_admission
-- utter_faq/ask_date_limite_reconnaissance_acquis
-- utter_faq/ask_frais_depot_demande_reconnaissance
-- utter_faq/ask_liste_programmes_admission
-- utter_faq/ask_transfert_procedure_admission
+- utter_faq/ask_demande_sti
+- utter_faq/ask_document_biblio
+- utter_faq/ask_document_impot
+- utter_faq/ask_emprunt_biblio
+- utter_faq/ask_entente_dec_bac_admission
+- utter_faq/ask_etapes_admission
 - utter_faq/ask_etudiant_international
-- utter_faq/ask_decision_admission
+- utter_faq/ask_formation_candidats_non_quebecois_admission
+- utter_faq/ask_frais_admission
+- utter_faq/ask_frais_depot_demande_reconnaissance
+- utter_faq/ask_frais_scolarite
+- utter_faq/ask_heure_biblio
+- utter_faq/ask_horaire_cours
+- utter_faq/ask_horaire_sti
+- utter_faq/ask_liberer_casier
+- utter_faq/ask_liste_programmes_admission
+- utter_faq/ask_modalite_admission
+- utter_faq/ask_montant_centre_sportif
+- utter_faq/ask_nombre_programmes
+- utter_faq/ask_non_dec_admission
+- utter_faq/ask_obtention_vignette_uqo
+- utter_faq/ask_perdu_preuve_admission
+- utter_faq/ask_pieces_admission
+- utter_faq/ask_presentiel_non_presentiel
+- utter_faq/ask_reconnaissance_acquis_admission
+- utter_faq/ask_stationnement_uqo
+- utter_faq/ask_transfert_procedure_admission
 - utter_faq/ask_types_admission
-- utter_faq/ask_choix_cours_admission
-- action_save_convo
+- utter_faq/ask_wifi_universite
+- utter_feedback
+- utter_goodbye
+- utter_greet
+- utter_help
+- utter_satisfied
+- utter_unsatisfied
 - validate_contact_us_form
-- action_submit_contact_us_form
 
 forms:
   contact_us_form:
     required_slots:
-      name:
-      - type: from_text
-      email:
-      - type: from_text
-      message:
-      - type: from_text
-      confirm_details:
-      - intent: affirm
-        value: yes
-        type: from_intent
-      - intent: deny
-        value: no
-        type: from_intent
+      - name
+      - email
+      - message
+      - confirm_details
+
+  form_enforce_yes_or_no:
+    required_slots:
+      - answer

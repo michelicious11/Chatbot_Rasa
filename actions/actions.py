@@ -125,11 +125,14 @@ class ActionSubmitContactForm(Action):
                 email=email,
                 message=message,
             )
-            is_mail_sent = send_email(f"{email.split('@')[0]} nous a contacté!", email, admin_content)
+            is_mail_sent = send_email(f"{email.split('@')[0]} nous a contacté!", "chatbotuqotest@gmail.com", admin_content)
             if is_mail_sent:
                 dispatcher.utter_message(template="utter_mail_success")
+                dispatcher.utter_message(template="utter_feedback")
             else:
                 dispatcher.utter_message("Désolé, je n'ai pas pu envoyer de courriel. Veuillez réessayer plus tard.")
+                dispatcher.utter_message(template="utter_feedback")
         else:
             dispatcher.utter_message(template="utter_mail_canceled")
+            dispatcher.utter_message(template="utter_feedback")
         return []

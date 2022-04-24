@@ -6,11 +6,69 @@ stories:
   - intent: help
   - action: utter_help
 
-- story: faq
+#- action: action_save_convo
+
+
+- story: Ask about faq yes
   steps:
   - intent: faq
   - action: utter_faq
+  - action: utter_feedback
   - action: action_save_convo
+  - intent: affirm
+  - action: utter_satisfied
+  - action: action_save_convo
+
+- story: Ask about faq no
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: utter_feedback
+  - action: action_save_convo
+  - intent: deny
+  - action: utter_unsatisfied
+  - action: action_save_convo
+
+- story: user said no to yes
+  steps:
+  - action: utter_satisfied
+  - intent: deny
+  - action: utter_goodbye
+  - action: action_save_convo
+
+- story: user said no to no
+  steps:
+  - action: utter_unsatisfied
+  - intent: deny
+  - action: utter_goodbye
+  - action: action_save_convo
+
+- story: user said yes to yes
+  steps:
+  - action: utter_satisfied
+  - intent: affirm
+  - action: utter_help
+  - action: action_save_convo
+
+- story: user said yes to no
+  steps:
+  - action: utter_unsatisfied
+  - intent: affirm
+  - action: utter_ask_name
+  - action: action_listen
+  - slot_was_set:
+    - name: from_text
+  - action: utter_ask_email
+  - action: action_listen
+  - slot_was_set:
+    - email: from_text
+  - action: utter_ask_message
+  - action: action_listen
+  - slot_was_set:
+    - message: from_text
+  - action: action_save_convo
+  
+
 
 - story: finish
   steps:

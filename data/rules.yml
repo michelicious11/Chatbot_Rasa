@@ -1,10 +1,22 @@
-version: "2.0"
+version: "3.1"
 
 rules:
-  - rule: respond to FAQs
+
+  - rule: Say Hello
     steps:
-    - intent: faq
-    - action: utter_faq
+    - intent: greet
+    - action: utter_greet
+
+  - rule: Say Goodbye
+    steps:
+    - intent: bye
+    - action: utter_goodbye
+    - action: action_save_convo
+
+  - rule: Say 'I am a bot'
+    steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
     - action: action_save_convo
 
   - rule: out of scope
@@ -12,8 +24,16 @@ rules:
     - intent: outofscope
     - action: utter_outofscope
     - action: action_save_convo
+    
+  - rule: Ask about faq
+    steps:
+    - intent: faq
+    - action: utter_faq
+    - action: utter_feedback
+    - action: action_save_convo
 
-  - rule: Activate, contact us form
+
+  - rule: Activate contact us form
     condition:
     - active_loop: null
     steps:
@@ -30,3 +50,27 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: action_submit_contact_us_form
+
+  - rule: user said yes
+    condition:
+    - active_loop: form_enforce_yes_or_no
+    steps:
+    - action: form_enforce_yes_or_no
+    - intent: affirm
+    - active_loop: null
+    - slot_was_set: 
+      - answer: yes
+    - action: utter_satisfied
+    
+
+
+  - rule: User said no
+    condition:
+    - active_loop: form_enforce_yes_or_no
+    steps:
+    - action: form_enforce_yes_or_no
+    - intent: deny
+    - active_loop: null
+    - slot_was_set: 
+      - answer: no
+    - action: utter_unsatisfied

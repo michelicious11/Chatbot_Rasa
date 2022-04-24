@@ -1,0 +1,876 @@
+
+greet,
+salutations,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous assister aujourd'hui?
+
+
+faq,
+Aide en mathématiques,
+help,
+Aide,
+
+utter_faq/ask_choix_cours_admission,
+Lorsque vous aurez été admis définitivement ou conditionnellement dans votre programme d'études, vous pourrez procéder à l'inscription 
+à vos cours en vous connectant à votre portail étudiant sur "https://uqo.ca/user". Ce site vous permettra d'y trouver toute l'information dont vous aurez besoin 
+pour votre démarche d'inscription. Veuillez consulter "https://uqo.ca/inscription" pour plus de détails.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Quelle est l'adresse?,
+
+,
+,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+greet,
+Bonjour,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous assister aujourd'hui?
+
+
+bye,
+Adresse,
+
+,
+,
+
+utter_goodbye,
+Bonne journée!
+
+
+greet,
+Bonjour,
+
+,
+,
+
+utter_greet,
+Salut! Que puis-je faire pour vous?
+
+
+faq,
+Quels sont les frais de scolarité?,
+finances,
+frais,
+
+utter_faq/ask_frais_admission,
+Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+help,
+Est-ce que vous pouvez m’aider?,
+help,
+aider,
+
+utter_help,
+Quelle est votre question?
+
+
+faq,
+Comment faire une demande d'admission?,
+admission,
+demande,
+
+utter_faq/ask_demande_admission,
+Vous pouvez faire une demande d'admission papier ou en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+Oui,
+
+,
+,
+
+faq,
+Est-ce possible d’avoir de l’information à propos du programme en informatique?,
+help,
+information,
+
+utter_faq/ask_heure_biblio,
+La bibliothèque est normalement ouverte de 8 h à 21 h 30 du lundi au jeudi, de 8 h à 18 h le vendredi et de 10 h à 17 h le weekend.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Comment faire une demande d'admission?,
+admission,
+demande,
+
+utter_faq/ask_demande_admission,
+Vous pouvez faire une demande d'admission papier ou en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+Le stationnement,
+parking,
+stationnement,
+
+utter_faq/ask_changer_info,
+Si vous changez d'adresse ou de numéro de téléphone, vous devez effectuer les modifications en utilisant le portail étudiant. 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+affirm,
+Oui,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+Quelle est l'adresse?,
+
+,
+,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+quelle heure est-il,
+date,
+heure,
+
+utter_faq/ask_heure_biblio,
+La bibliothèque est normalement ouverte de 8 h à 21 h 30 du lundi au jeudi, de 8 h à 18 h le vendredi et de 10 h à 17 h le weekend.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+L'admission,
+
+,
+,
+
+utter_faq/ask_frais_admission,
+Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+le baccalauréat en informatique,
+sti,
+informatique,
+
+utter_faq/ask_demande_sti,
+Pour toute demande de soutien informatique vous pouvez composer le poste 2211 ou le numéro de téléphone 819-595-2211 ou créer une requête via le système de requêtes informatiques de l'UQO disponible à partir de votre portail de l'UQO ou par courriel à l'adresse "sti@uqo.ca".
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Comment puis-je m'inscrire?,
+
+,
+,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+A quelle heure ouvre l'universite,
+date,
+heure,
+
+utter_faq/ask_centre_sportif,
+Le Centre sportif est ouvert tous les jours! Du lundi au vendredi de 6h30 à 20h et la fin de semaine de 8h à 17h.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Quels sont les frais de scolarité?,
+finances,
+frais,
+
+utter_faq/ask_frais_admission,
+Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+affirm,
+Oui,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+A quelle heure puis-je me presenter a l'universite,
+date,
+heure,
+
+utter_faq/ask_types_admission,
+Il y a quatre types d'admission:
+- Admission définitive;
+- Admission conditionnelle;
+- Liste d'attente;
+- Refus.
+Pour plus d'informations, référez vous à l'étape 8 dans "https://uqo.ca/etudiants/etapes-suivre-pour-faire-une-demande-dadmission".
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Quelle est votre question?
+
+
+faq,
+a quelle heure ouvre l'universite,
+date,
+heure,
+
+utter_faq/ask_centre_sportif,
+Le Centre sportif est ouvert tous les jours! Du lundi au vendredi de 6h30 à 20h et la fin de semaine de 8h à 17h.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+comment puis-je louer un loca,
+
+,
+,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+comment puis-je louer un local,
+
+,
+,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+L'horaire scolaire,
+date,
+horaire,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+Oui,
+
+,
+,
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+quel est le local d'un professeur,
+
+,
+,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+ou se trouve un certain local,
+services,
+certain,
+
+utter_faq/ask_wifi_universite,
+Le réseau sans-fil "eduroam" est disponible à l'UQO. La procédure à suivre pour se connecter au réseau sans-fil est disponible au lien suivant: "https://uqo.ca/sti/eduroam-reseau-sans-fil-pour-etudiants-employes-wi-fi"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+ou se trouve le local B1002,
+
+,
+,
+
+utter_faq/ask_wifi_universite,
+Le réseau sans-fil "eduroam" est disponible à l'UQO. La procédure à suivre pour se connecter au réseau sans-fil est disponible au lien suivant: "https://uqo.ca/sti/eduroam-reseau-sans-fil-pour-etudiants-employes-wi-fi"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+J’ai une question concernant mon admission,
+help,
+question,
+
+utter_faq/ask_frais_admission,
+Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+ou se trouve le centre sportif,
+services,
+centre sportif,
+
+utter_faq/ask_centre_sportif,
+Le Centre sportif est ouvert tous les jours! Du lundi au vendredi de 6h30 à 20h et la fin de semaine de 8h à 17h.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+Quand puis-je m’inscrire a des cours pour la session d’été,
+date,
+Quand,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+il y a combien de programme à l’uqo?,
+admission,
+programme,
+
+utter_faq/ask_nombre_programmes,
+Vous avez le choix parmi 191 programmes. Pour plus d'informations, Veuillez consulter 
+la Banque de programmes au "https://etudier.uqo.ca/programmes"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+il y a combien d’étudiants à l’iWork,
+studies,
+étudiants,
+
+utter_faq/ask_frais_admission,
+Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Il y a combien d’étudiants à l’uqo ?,
+student,
+étudiants,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+Il y a combien d’étudiants à l’uqo ?,
+student,
+étudiants,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+où est le pavillon d’économie?,
+
+,
+,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Quels sont les services offerts par les finances?,
+services,
+services,
+
+utter_faq/ask_bourses,
+Pour connaître tous les détails entourant chacune des bourses offertes par la Fondation, les futurs étudiants et étudiantes sont invités à consulter le lien suivant : "https://uqo.ca/fondation/programme-bourse"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+Oui,
+
+,
+,
+
+faq,
+Quel est la date du début de la session d’été?,
+time,
+date,
+
+utter_faq/ask_dates_limites_admission,
+Pour consulter les dates limites d'admission, allez au "http://uqo.ca/etudiants/admission/dates-limites-admission"
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+Je veux avoir des infos,
+help,
+infos,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+Non,
+
+,
+,
+
+utter_help,
+Quelle est votre question?
+
+
+faq,
+la session d’été,
+
+,
+,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Quel est le but du chat,
+services,
+chat,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+deny,
+non,
+
+,
+,
+
+utter_help,
+Sur quel sujet voulez-vous de l'information?
+
+
+faq,
+les cours,
+studies,
+cours,
+
+utter_faq/ask_horaire_cours,
+Consultez le lien suivant afin de voir l'horaire des cours : https://etudier.uqo.ca/horaire 
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+Oui,
+
+,
+,
+
+greet,
+?,
+
+,
+,
+
+utter_greet,
+Salut! Que puis-je faire pour vous?
+
+
+help,
+J'ai des questions,
+
+,
+,
+
+utter_help,
+Quel est l'objet de votre question?
+
+
+faq,
+C'est quand les admissions,
+date,
+quand,
+
+utter_faq/ask_frais_admission,
+Les droits d'admission sont de 60,00 $ pour une demande papier et 30,00 $ pour une demande en ligne.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+affirm,
+oui,
+
+,
+,
+
+greet,
+Bonjour!,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous assister aujourd'hui?
+
+
+greet,
+Hello,
+
+,
+,
+
+utter_greet,
+Bonjour! Comment puis-je vous aider?
+
+
+faq,
+Comment cava,
+
+,
+,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+
+
+faq,
+Je veux etudier,
+
+,
+,
+
+utter_faq/ask_casier_uqo,
+L'Université met à votre disposition des casiers à chacun des pavillons. Afin de vous en procurez un, vous devez vous présenter au bureau des résidences et stationnements situé au 283, boulevard Alexandre-Taché, bureau C-0340, avec votre carte étudiante afin d'en acquitter les frais.
+
+
+utter_feedback,
+Êtes-vous satisfait de la réponse?
+

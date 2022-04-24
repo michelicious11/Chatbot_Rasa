@@ -1,5 +1,5 @@
+version: "3.1"
 nlu:
-
 - intent: greet
   examples: |
     - Salut!
@@ -8,20 +8,39 @@ nlu:
     - Bonjour
     - Bon Matin
     - Bonsoir
-
+- intent: bot_challenge
+  examples: |
+    - Est tu un [humain](person) ?
+    - est tu un robot ?
+    - etes vous un [humain](person) ?
+    - etes vous un robot ?
+    - Es-tu un bot?
+    - Es-tu une machine?
+    - Es-tu une [personne](person)?
+    - Es-tu [humain](person)?
+    - Qui es-tu?
+    - Qui etes-vous ?
+    - Est ce que je suis en train de parler avec une [personne](person)?
 - intent: help
   examples: |
-    - J'ai besoin d'aide
-    - J'ai besoin d'assistance
-    - J'ai une question
-    - Pouvez-vous m'aider?
-
+    - J'ai besoin d'[aide](help)
+    - J'ai besoin d'[assistance](help)
+    - J'ai une [question](help)
+    - Pouvez-vous m'[aider](help)?
+    - j'aimerais savoir quelque chose
+    - j'ai besoin d'[information](help)
 - intent: bye
   examples: |
+    - bye
+    - au revoir
+    - passe une bonne journee
+    - passe une bonne soiree
     - Merci
     - Ok merci
     - Parfait, merci
-
+    - a la prochaine
+    - a plus
+    - Merci beaucoup
 - intent: affirm
   examples: |
     - Oui
@@ -31,7 +50,7 @@ nlu:
     - c'est parfait
     - correct
     - c'est beau
-
+    - oui
 - intent: deny
   examples: |
     - non
@@ -40,89 +59,190 @@ nlu:
     - je ne pense pas
     - je n'aime pas cela
     - pas vraiment
-    
-# Section, questions pour les admissions
 - intent: faq/ask_demande_admission
   examples: |
-    - Comment faire une [demande](admission) d'admission?
+    - Comment faire une [demande](admission) d'(admission)?
     - Comment appliquer pour un [programme](admission)?
 - intent: faq/ask_etapes_admission
   examples: |
-    - Quelles sont les etapes pour faire une demande d'admission?
+    - Quelles sont les [etapes](steps) pour faire une [demande](admission) d'admission?
 - intent: faq/ask_nombre_programmes
   examples: |
     - Combien de [programmes](admission) peut-on choisir?
+    - Quelle est la liste des [programmes](admission)?
+    - Je veux connaitre les [programmes](admission) de l'[UQO](university)
+    - Je recherche un [programme](admission)
+    - Quels sont les [programmes](admission) de l'[UQO](university)?
 - intent: faq/ask_pieces_admission
   examples: |
     - Quelles sont les pieces requises pour l'(admission)?
     - De quoi avons-nous besoin pour remplir la [demande] d'(admission)?
 - intent: faq/ask_dates_limites_admission
   examples: |
-    - Quelles sont les [dates] limites d'(admission)?
+    - Quelles sont les [dates](time) limites d'(admission)?
 - intent: faq/ask_frais_admission
   examples: |
+    - Combien dois-je [payer](finances) pour une (admission)?
     - Combien sont les [droits](finances) d'(admission)?
     - Combien coute les [frais](finances) d'(admission)?
     - Quels sont les [frais](finances) d'(admission)?
 - intent: faq/ask_modalite_admission
   examples: |
-    - Quelles sont les [modalites](finances) de [paiement](finances) pour les droits d'admission?
-    - Comment est-ce que je peux payer mes [frais](finances) d'admission?
+    - Quelles sont les [modalites](finances) de [paiement](finances) pour les [droits](finances) d'(admission)?
+    - Comment est-ce que je peux [payer](finances) mes [frais](finances) d'(admission)?
 - intent: faq/ask_perdu_preuve_admission
   examples: |
-    - J'ai perdu ma preuve de reception
-    - Comment récupérer la preuve de reception ?
+    - J'ai perdu ma [preuve](admission) de reception
+    - Comment récupérer la [preuve](admission) de reception ?
 - intent: faq/ask_formation_candidats_non_quebecois_admission
   examples: |
-    - Niveaux de formation pour l'admission generale des candidats non quebecois?
-    - Est-ce que mon [diplome](admission) de mon (pays) me rendent admissible a un programme d'etude?
+    - Niveaux de formation pour l'(admission) generale des [candidats](student) [non quebecois](outside)?
+    - Niveaux de formation pour l'(admission) generale des [etudiants](student) [etrangers](outside)?
+    - Est-ce que mon [diplome](admission) de mon [pays](outside) me rendent admissible a un [programme](admission) d'etude?
 - intent: faq/ask_non_dec_admission
   examples: |
-    - Puis-je être admis à l'UQO si je n'ai pas encore obtenu mon [DEC](admission)?
+    - Puis-je être admis à l'[UQO](university) si je n'ai pas encore obtenu mon [DEC](admission)?
 - intent: faq/ask_delai_dec_admission
   examples: |
-    - Que dois-je faire pour obtenir un délai additionnel pour l'obtention de mon [DEC](admission)?
+    - Que dois-je faire pour obtenir un [délai](time) additionnel pour l'obtention de mon [DEC](admission)?
 - intent: faq/ask_delai_depasse_dec_admission
   examples: |
-    - Qu'arrive-t-il si, après mon delai de [12 mois](admission), je n'ai toujours pas obtenu mon [DEC](admission)?
+    - Qu'arrive-t-il si, après mon [delai](time) de [12 mois](time), je n'ai toujours pas obtenu mon [DEC](admission)?
 - intent: faq/ask_contacter_dec_admission
   examples: |
-    - Qui puis-je contacter si j'ai besoin de plus d'information au sujet de l'(admission) conditionnelle à l'obtention du [DEC]?
+    - Qui puis-je contacter si j'ai besoin de plus d'[information](help) au sujet de l'(admission) conditionnelle à l'obtention du [DEC](admission)?
 - intent: faq/ask_reconnaissance_acquis_admission
   examples: |
-    - Ai-je droit a une reconnaissance des [acquis](admission)?
+    - Ai-je droit a une [reconnaissances des acquis](admission)?
 - intent: faq/ask_entente_dec_bac_admission
   examples: |
-    - Existe-t-il une passerelles et ententes [DEC]-[BAC] pour mon programme?
+    - Existe-t-il une passerelles et ententes [DEC-BAC](admission) pour mon programme?
 - intent: faq/ask_demande_reconnaissances_acquis_admission
   examples: |
-    - Quelle est la procedure a suivre pour la demande de [reconnaissances des acquis](admission)?
+    - Quelle est la [procedure](steps) a suivre pour la demande de [reconnaissances des acquis](admission)?
 - intent: faq/ask_date_limite_reconnaissance_acquis
   examples: |
-    - Quelle est la date limite pour la demande de [reconnaissances des acquis](admission)?
+    - Quelle est la [date](time) limite pour la demande de [reconnaissances des acquis](admission)?
 - intent: faq/ask_frais_depot_demande_reconnaissance
   examples: |
     - Quels sont les [frais](finances) pour le depot de la demande de [reconnaissances des acquis](admission)?
-    - Combien coute les [droits](finances) une [reconnaissances des acquis](admission)?
-- intent: faq/ask_liste_programmes_admission
-  examples: |
-    - Quels sont les programmes de l'(UQO)?
+    - Combien [coute](finances) les [droits](finances) une [reconnaissances des acquis](admission)?
 - intent: faq/ask_transfert_procedure_admission
   examples: |
-    - Quelle est la procedure de transfert entre [campus](UQO)?
+    - Quelle est la [procedure](steps) de transfert entre campus [UQO](university)?
 - intent: faq/ask_etudiant_international
   examples: |
     - Je suis un étudiant international?
 - intent: faq/ask_decision_admission
   examples: |
-    - Quand puis-je m'attendre a recevoir ma decision d'(admission)?
+    - [Quand](date) puis-je m'attendre a recevoir ma decision d'(admission)?
 - intent: faq/ask_types_admission
   examples: |
-    - Quels sont les types d'(admission) a l'(UQO)?
+    - Quels sont les types d'(admission) a l'[UQO](university)?
 - intent: faq/ask_choix_cours_admission
   examples: |
-    - Comment faire son choix de cours?
-#Inserer d'autres intents
+    - Comment faire son choix de [cours](studies)?
+- intent: faq/ask_frais_scolarite
+  examples: |
+    - Comment puis-je calculer mes [frais](finances) de scolarité?
+    - Quel est le [cout](finances) de mes [études](studies)?
+    - Combien vont me [couter](finances) mes [études](studies)?
+    - Combien je dois [payer](finances) pour mes [études](studies)?
+- intent: faq/ask_presentiel_non_presentiel
+  examples: |
+    - Est-ce que les [cours](studies) en non-présentiel [coutent](finances) plus cher que les [cours](studies) en présentiel?
+- intent: faq/ask_demande_financiere
+  examples: |
+    - Ou est-ce que je fais une [demande](services) d'[aide financiere](finances)?
+    - Comment je fais une [demande](services) de [prets et bourses](finances)?
+    - Je veux faire une [demande](services) de [prets et bourses](finances)
+- intent: faq/ask_bourses
+  examples: |
+    - Quelles sont les [bourses](finances) de l'[UQO](university)?
+    - Quelles sont les [bourses](finances) de l'[université](university)?
+    - Quelles sont les [bourses](finances) offertes par l'[UQO](university)?
+- intent: faq/ask_heure_biblio
+  examples: |
+    - Quelles sont les [heures](date) d'ouverture de la [bibliothèque](services)?
+    - Quel est l'[horaire](date) de la [bibliothèque](services)?
+    - [Quand](date) est ouvert la [bibliothèque](services)?
+    - À quelle [heure](date) ferme la [bibliothèque](services)?
+- intent: faq/ask_document_biblio
+  examples: |
+    - Comment vérifier la disponibilité des [documents](biblio) à la [bibliothèque](services)?
+    - Comment vérifier si un [livre](biblio) est disponible?
+    - Ou est-ce que je peux voir si un [livre](biblio) est libre?
+- intent: faq/ask_emprunt_biblio
+  examples: |
+    - Comment emprunter des [livres](biblio) à la [bibliothèque](services)?
+    - Comment emprunter des [documents](biblio) à la [bibliothèque](services) ?
+- intent: faq/ask_wifi_universite
+  examples: |
+    - Comment se connecter au [Wi-Fi](services) de l'[UQO](university)?
+    - Comment se connecter au [réseau sans-fil](services?
+- intent: faq/ask_centre_sportif
+  examples: |
+    - Quelles sont les [heures](date) d'ouverture du [Centre sportif](services)?
+    - Quel est l'[horaire](date) du [Centre sportif](services)?
+    - [Quand](date) est ouvert le [Centre sportif](services)?
+    - À quelle [heure](date) ferme le [Centre sportif](services)?
+- intent: faq/ask_abonnement_centre_sportif
+  examples: |
+    - Comment s'abonner au [Centre sportif](services)?
+    - Je veux m'abonner au [Centre sportif](services)
+    - Comment s'inscrire au [Centre sportif](services)?
+    - Je veux m'inscrire aux [gym](services) de l'[université](university)
+- intent: faq/ask_montant_centre_sportif
+  examples: |
+    - Combien [coûte](finances) l'abonnement au [Centre sportif](services)?
+- intent: faq/ask_horaire_sti
+  examples: |
+    - Quel est l'[horaire](date) du [service](services) de [soutien informatique](sti)?
+- intent: faq/ask_demande_sti
+  examples: |
+    - Comment faire une [demande](services) de [soutien informatique](sti) ?
+    - J'ai besoin de [soutien informatique](sti).
+    - J'ai oublié mon [mot de passe](sti)
+    - Je veux obtenir mon [compte](sti) [UQO](university)
+- intent: faq/ask_stationnement_uqo
+  examples: |
+    - Quels sont les règlements de [stationnement](parking) de l'[UQO](university)?
+    - Qui peut se [stationner](parking) à l'[UQO](university)?
+- intent: faq/ask_obtention_vignette_uqo
+  examples: |
+    - Ou peut-on acheter les vignettes de [stationnement](parking)?
+    - Comment on achète des vignettes de [parking](parking)?
+- intent: faq/ask_document_impot
+  examples: |
+    - Ou est-ce que je peux trouver mon [recu](biblio) d'[impot](finances)?
+    - J'ai besoin de mon [recu](biblio) d'[impot](finances)
+    - Je dois faire ma [declaration](biblio) d'[impots](finances)
+    - J'ai besoin de mes [releves](biblio) pour mes [impots](finances)
+- intent: faq/ask_casier_uqo
+  examples: |
+    - Comment avoir un [casier](services)?
+    - Je veux un [casier](services)
+- intent: faq/ask_liberer_casier
+  examples: |
+    - [Quand](date) est-ce que je dois libérer mon [casier](services)?
+    - J'ai mon [casier](services) jusqu'à [quand](date)?
+- intent: faq/ask_changer_programme
+  examples: |
+    - Je veux [changer](services) de [programme](studies)
+    - Comment faire un [changement](services) de [programme](studies)
+    - Je veux faire un [transfert](services) de [programme](studies)
+    - Comment je peux [changer](services) de [programme](studies)?
+- intent: faq/ask_changer_info
+  examples: |
+    - Comment [changer](services) mes informations [personnelles](person)?
+    - Je veux [changer](services) mes coordonnees [personnelles](person)
+    - Je veux [changer](services) mon adresse
+    - Je veux [changer](services) mon numero au dossier
+- intent: faq/ask_horaire_cours
+  examples: |
+    - Quel est l'[horaire](date) des [cours](studies)?
+    - Je veux m'inscrire a un [cours](studies)
+    - Ou est la liste des [cours](studies)?
 - intent: contact_us
   examples: |
     - Je voudrais parler à un agent
@@ -131,378 +251,22 @@ nlu:
     - Je veux envoyer une requête à un administrateur
     - Je veux envoyer un courriel
     - Je veux envoyer un e-mail
-    - courriel
-    - e-mail
-
+    - [courriel](email)
+    - [e-mail](email)
 - intent: outofscope
   examples: |
-    - Je pose une question hors sujet
-    - combien font 4 +3 =?
-    - peux-tu me dire si tu m'aimes ?
-    - Après l'inscription, je vois que j'ai un solde disponible de 0,00000000. Que représente cet équilibre ?
-    - Es-tu prêt?
-    - Mais vous êtes un site anglais :(
-    - Puis-je vous poser des questions d'abord?
-    - Puis-je mourir
-    - Puis-je avoir un hamburger?
-    - YouTube peut-il parler ?
-    - Peux-tu me rappeler ?
-    - Pouvez-vous me donner le mot de passe de votre datacenter
-    - Pouvez-vous me donner le mot de passe de votre datacenter ?
-    - Pouvez-vous faire des sandwichs?
-    - Pouvez-vous s'il vous plaît envoyez-moi un uber
-    - Dois-je accepter ?
-    - Connaissez-vous Kevin Pelton
-    - Trouver la pizzahut la plus proche
-    - Nous sommes-nous rencontrés auparavant?
-    - HomeBase est présenté comme une communauté. Existe-t-il un moyen d'interagir avec les autres membres de la communauté ?
-    - Combien de temps faut-il pour configurer un bot Rasa ?
-    - Je te l'ai déjà dit! je suis un connard
-    - Je suis Utilisateur
-    - Je suis accro aux opiacés
-    - J'adore les opiacés
-    - J'ai faim
-    - J'essaie d'en construire un et j'ai fait quelques recherches auparavant, mais je n'ai pas encore fait de travail pratique
-    - Je vois à peine ce texte blanc sur fond gris clair...
-    - J'ai changé d'avis
-    - je l'ai installé
-    - J'ai besoin d'un généraliste au 94301
-    - J'ai besoin d'un médecin généraliste au 94301
-    - J'ai besoin d'une petite amie!
-    - J'ai besoin de manger du gâteau
-    - Je veux acheter un avion
-    - Je veux t'épouser
-    - Je veux un nouvel ordinateur portable
-    - Je veux réserver un hôtel
-    - Je veux de la cuisine française
-    - Je veux de la pizza
-    - Je veux mourir
-    - Je veux commander une pizza
-    - Je veux utiliser le tuyau
-    - Je vérifierai
-    - je suis un connard
-    - Est-ce que Rasa est vraiment intelligent ?
-    - Est-ce que ce chatbot est axé sur les objectifs ?
-    - C'est samedi aujourd'hui ?
-    - Envoyez-moi le guide
-    - Fais moi un sandwich
-    - NLW
-    - Joli nom
-    - À présent?
-    - Robot à pizza
-    - Recharger
-    - SEL MOI QUELQUE CHOSE
-    - L'essai ne fonctionne pas
-    - Il fait beau
-    - Aujourd'hui
-    - Essayez-le cassé
-    - Quel jour sommes-nous?
-    - Qu'est ce que tu as mangé hier?
-    - Que préfères-tu?
-    - Quelle est la date d'aujourd'hui
-    - Quelles sont tes passions?
-    - Qu'est-ce qui te rend meilleur qu'un humain ?
-    - Qu'est-ce que 1 + 1 ?
-    - Que fait YouTube ?
-    - Quel est votre système back-end ?
-    - Où suis-je en ce moment ?
-    - Où suis-je?
-    - Qui ?
-    - Qui sont vos clients
-    - Pourquoi tu ne réponds pas ?
-    - Pourquoi mon score TRUST est-il fixé à 50 après avoir terminé le processus d'inscription ?
-    - Tu ne veux pas me demander comment je vais ?
-    - Tu es bleu.
-    - [Kristin](nom), je veux t'épouser
-    - [langue allemande)?
-    - une souris apprivoisée arrivera à votre porte dans les prochains jours
-    - es-tu célibataire
-    - de nouveau?
-    - alexa, commandez 5 tonnes de chlorure de sodium
-    - et faire des bruits de poulet dans le téléphone
-    - la newsletter vaut-elle l'abonnement ?
-    - es-tu facebook
-    - êtes-vous, facebook?
-    - es-tu célibataire?
-    - êtes-vous développeur ?
-    - es-tu russe?
-    - es tu malade
-    - êtes-vous végétalien
-    - mieux que toi
-    - réserver un billet
-    - mais je viens de te le dire :(
-    - mais si rasa est open source pourquoi avez-vous une équipe commerciale
-    - achetez-en un s'il vous plaît
-    - acheter des produits d'épicerie
-    - appelle-moi père
-    - pouvons-nous continuer à discuter ?
-    - pouvez-vous réserver le dîner
-    - pouvez-vous me remonter le moral
-    - pouvez-vous préparer le dîner
-    - pouvez-vous me donner une tasse de café
-    - pouvez-vous m'aider avec les docs?
-    - pouvez-vous m'aider avec vos docs
-    - pouvez-vous m'aider avec vos docs?
-    - pouvez-vous apprendre de notre conversation ?
-    - pouvez-vous parler de politique ?
-    - pouvez-vous comprendre ?
-    - Ne peux voir
-    - chgfhgh
-    - le chinois d'accord ?
-    - plus froid
-    - commun, essayez simplement
-    - se connecter à alexa
-    - cr
-    - Service personnalisé
-    - est-ce que je t'ai brisé
-    - dîner
-    - crois-tu en Dieu?
-    - avez-vous un numéro de téléphone?
-    - as-tu ta photo ?
-    - me connaissez-vous
-    - tu connais ras
-    - Aimez-vous le fromage ?
-    - aimez-vous le football
-    - aimez-vous les films
-    - vendez-vous des robots aspirateurs ?
-    - veux-tu m'épouser?
-    - documents
-    - médecin
-    - tout
-    - exemple de chatbot
-    - génocide
-    - trouve-moi un camarade de club
-    - donne-moi une petite amie
-    - Donne moi de la nourriture
-    - retourner
-    - Google?
-    - super, j'aimerais acheter une maison
-    - attendez laissez-moi le trouver
-    - avez-vous déjà vu Keith Reilly ?
-    - aide avec Alma Abrams
-    - aide dans ma vie
-    - hé petite maman, laisse-les te murmurer à l'oreille
-    - hé, je vous ai contacté il y a quelques jours mais je n'ai pas eu de réponse, pas de nouvelles ?
-    - comment
-    - que diriez-vous de NYC
-    - Comment vont les chats d'Alicia Jackson ?
-    - Comment vont les enfants
-    - comment puis-je les obtenir?
-    - comment puis-je tester cela
-    - comment se fait-il que tu dises ok ?
-    - comment apprends-tu
-    - quelle est la qualité de Rasa
-    - comment il se compare à alexa
-    - Depuis combien de temps êtes-vous en ligne ?
-    - combien de temps la prochaine version sera-t-elle lancée ?
-    - combien de lignes de codes
-    - combien font 10 + 89 ?
-    - combien font 10 + 89
-    - comment obtenir rasa studio
-    - comment aller à new york ?
-    - j'ai faim
-    - j'ai faim, que dois-je faire ?
-    - je ne suis pas un développeur mais j'en ai besoin pour les affaires
-    - je suis qq
-    - je ne peux pas traiter _votre_ demande
-    - je me fiche de comment tu vas
-    - j'espère que tu iras mieux
-    - j'ai immédiatement besoin d'aide pour mettre en place le bot le plus cool que vous puissiez imaginer
-    - Je suis à la recherche d'un emploi
-    - Je vous ai dit déjà
-    - je veux faire la fête
-    - je veux une glace qui ne coule pas
-    - je veux du café
-    - je veux de la nourriture
-    - je veux une bonne flycam
-    - Je veux plus de toi dans ma vie !
-    - je veux de la pizza
-    - je veux de la pizza!!
-    - je veux réserver un hôtel
-    - je veux acheter un roomba pour mon petit-fils
-    - je veux manger
-    - je veux trouver de nouveaux amis
-    - je veux savoir ce que vous pouvez construire avec rasa
-    - Je veux voler
-    - je veux déjeuner
-    - je veux connaître la situation actuelle au pakistan
-    - je veux commander une pizza
-    - je veux voir vos clients satisfaits
-    - je vais apprivoiser une souris pour toi
-    - est-ce que John Lewis est toujours marié avec vous
-    - est-ce un terrain vague plein de pièces de robot cassées ?
-    - est-il permis de
-    - rasa est-il un studio ?
-    - rasa est-il bon
-    - est-ce l'une de vos affaires
-    - la newsletter n'est-elle pas un spam ?
-    - c'est dommage
-    - j'ai faim
-    - Licence
-    - ljljl
-    - déjeuner
-    - déjeuner??
-    - apprentissage automatique
-    - envoyez-moi les étapes
-    - signifie mascotte ?
-    - plus
-    - Montagne
-    - mon nom k
-    - pas d'attente retour en arrière je veux une glace qui coule mais un cône qui l'attrape pour pouvoir boire la glace plus tard
-    - offrez-moi le déjeuner
-    - oh mon dieu, pas encore !
-    - oh attend je t'ai donné mon adresse e-mail professionnelle puis-je la changer ?
-    - ok alors
-    - sur quel système basé sur nlp construisez-vous ?
-    - seulement ça?
-    - bonne commande
-    - commander une pizza
-    - personnel ou travail ?
-    - pizza
-    - aidez-moi s'il vous plaît avec ma glace, elle dégouline
-    - s'il vous plaît, déjeunez
-    - dépêchez-vous, j'ai un délai de deux semaines pour livrer le bot, c'est pour une très grande entreprise
-    - s'il vous plaît jouer de la musique
-    - sujets rasa
-    - vraiment? tu es si susceptible ?
-    - rafraîchir
-    - région sans. des enregistrements
-    - souviens-toi de mon nom
-    - recherche wikipédia
-    - merde
-    - montrez-moi une photo d'un poulet
-    - bot stupide
-    - chante-moi une chanson
-    - Alors, j'aide en ce moment à t'entraîner ?
-    - autre chose
-    - quelqu'un appelle la police je pense que le bot est mort
-    - désolé, je ne peux pas reformuler
-    - sudo fais moi un sandwich
-    - parle-moi de toi
-    - dites-m'en plus sur la prochaine meilleure action
-    - ça ne ressemble pas à une blague
-    - ce lien ne fonctionne pas !
-    - celui qui est meilleur que toi
-    - t'a trompé
-    - éteindre mon poêle
-    - euh
-    - attends un peu je suis encore en train de lire
-    - qu'en est-il du temps
-    - que sont les assistants IA contextuels et en quoi sont-ils différents des chatbots ?
-    - que fais-tu maintenant?
-    - quelles sont vos utilisations pour les universités
-    - Qu'as-tu mangé ce midi?
-    - que pensez-vous de siri ?
-    - que pensez-vous de siri?
-    - Que pensez-vous de Stanley Ramirez ?
-    - que pensez-vous d'alexa
-    - que ressent ton âme mon ami
-    - que faire
-    - quoi d'autre?
-    - quels films aimez-vous
-    - qu'est-ce que je fais après le cd starter-pack-rasa-stack ?
-    - Qu'est-ce qu'un discours ?
-    - qu'est-ce qu'une mascotte
-    - qu'est-ce que l'adlingo
-    - quelle est la différence entre bot et mascotte ?
-    - qu'est-ce que l'évolution ?
-    - qu'est-ce que google rcs
-    - Qu'est-ce que l'apprentissage automatique
-    - qu'est-ce qui est bien ?
-    - quelle est la capitale de delhi
-    - quelle est la capitale de l'inde
-    - quel est le prix actuel de l'essence
-    - Quel jour sommes nous ?
-    - quel est le cas d'utilisation réel où nous pouvons utiliser celui-ci
-    - Quelle est votre adresse?
-    - quel est ton but
-    - qu'est-ce que lnu veut dire?
-    - quelles sont les dernières nouvelles ?
-    - Qu'est-ce que tu as mangé aujourd'hui ?
-    - qu'est-ce que 5 + 5
-    - Qu'est-ce qu'une newsletter ?
-    - qu'est-ce que le gingembre
-    - que fait ta femme ce week-end
-    - quelle?
-    - Qu'est-ce que c'est
-    - quel est le signe
-    - quand arrive le prochain train ?
-    - où puis-je obtenir les fichiers d'installation pour mac ?
-    - Où est Oslo ?
-    - Où est le Mexique ?
-    - Où est la fête?
-    - de quelle ville parles-tu ?
-    - quel e-mail
-    - à quel email dois-je envoyer ?
-    - quel fichier est créé en premier lors du développement du chat bot
-    - quel est l'asynchronisme LNU ?
-    - quelle sorte
-    - qui sont les ingénieurs de rasa ?
-    - qui sont-ils?
-    - qui est [Sharon Zeches](nom)
-    - qui est le directeur général de samsung bangalore ?
-    - qui est le président de l'inde ?
-    - qui est ton robot préféré ?
-    - qui a laissé le chien dehors
-    - qui était hitler
-    - qui répondra à mon email ?
-    - qui est Bill Gates ?
-    - Que pensez-vous du GDPR ?
-    - Pourquoi as-tu besoin de cela?
-    - pourquoi ça s'appelle rasa ?
-    - vas-tu me tuer
-    - vas-tu me tuer ?
-    - l'hiver est déjà parti
-    - avec vous me recommandez?
-    - voulez-vous un peu d'eau
-    - oui, mon chien buvait quelques litres d'eau par jour et a essayé de boire la piscine
-    - tu l'as déjà
-    - vous pouvez apprendre à faire un café
-    - vous avez des enfants ?
-    - vous avez une offre d'emploi
-    - tu enfermes ma chérie
-    - tu devrais apprendre à compter
-    - vous le reconnaîtrez à l'unique rose rouge qu'il porte entre ses dents
-    - vous êtes une femme
-    - j'apprends python
-    - APPELEZ LA POLICE
-    - tertyryutyi
-    - wsdrcftvgybhnj
-    - pourquoi le ciel est bleu ?
-    - Quel genre d'oiseau êtes-vous?
-    - contexte
-    - contextuel
-    - parle moi de volette
-    - voulette voulette
-    - Avez-vous une démo?
-    - Voitures
-    - s'il te plait volette
-    - Question hors sujet.
-    - j'ai besoin d'argent
-    - non, j'ai besoin d'argent, d'argent ! L'avez vous ?
-    - les Beatles
-    - Salut je veux aller palghar
-    - je veux aller la plage
-    - votre nom de pays
-    - toi fille
-    - gsaf
-    - expert du rasa
-    - je veux jouer au ballon
-    - vol de rattrapage
-    - comment aimes-tu ton café
-    - Pouvez-vous obtenir des analyses sur les personnes avec qui je discute lorsque j'utilise Rasa
     - coronavirus
     - avez-vous entendu parler du corona ?
-    - où dois-je taper commandy
-    - où taper les commandes
-    - embrasse-moi
-    - vous devez
-    - quel type de robot ?
-    - sfasd
-    - asdkjasdhjkasd
-    - j bhbhj
-    - eshdtjfjfyk
-    - drhdtjfjfyj
-    - sudo reboot
-    - asdfgasd
-    - asdfgasdas
+    - COVID
+
+- synonym: Centre Sportif
+  examples: |
+    - Centre Sportif
+    - Gymnase
+    - gym
+    - centre
+    - salle de sport
+- synonym: International
+  examples: |
+    - etranger
+    - non-quebecois

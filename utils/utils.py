@@ -30,13 +30,6 @@ def send_email(subject:str, recipient_email:str, content:str):
         logger.info(traceback.print_exc())
         return False
 
-
-def get_image_data(filepath:str):
-    with open(filepath, "rb") as image_data:
-        maintype, subtype = mimetypes.guess_type(image_data.name)[0].split("/")
-        return image_data.read(), maintype, subtype
-
-
 def get_html_data(filepath:str):
     with open(filepath, "r") as html_data:
         return html_data.read()

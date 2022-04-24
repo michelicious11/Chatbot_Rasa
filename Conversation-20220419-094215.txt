@@ -1,0 +1,10 @@
+
+bye,
+Merci,
+
+,
+,
+
+utter_goodbye,
+Aurevoir!
+

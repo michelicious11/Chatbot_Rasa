@@ -1,0 +1,58 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"bye\"}}]": "action_save_convo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"bye\"}}, {\"prev_action\": {\"action_name\": \"action_save_convo\"}, \"user\": {\"intent\": \"bye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_save_convo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"action_save_convo\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}]": "utter_unsatisfied",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_unsatisfied\"}, \"user\": {\"intent\": \"deny\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"contact_us_form\"}}]": "action_submit_contact_us_form",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"contact_us_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_submit_contact_us_form\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"outofscope\"}}]": "utter_outofscope",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"outofscope\"}}, {\"prev_action\": {\"action_name\": \"utter_outofscope\"}, \"user\": {\"intent\": \"outofscope\"}}]": "action_save_convo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"outofscope\"}}, {\"prev_action\": {\"action_name\": \"utter_outofscope\"}, \"user\": {\"intent\": \"outofscope\"}}, {\"prev_action\": {\"action_name\": \"action_save_convo\"}, \"user\": {\"intent\": \"outofscope\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq\"}}]": "utter_faq",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq\"}}, {\"prev_action\": {\"action_name\": \"utter_faq\"}, \"user\": {\"intent\": \"faq\"}}]": "utter_feedback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq\"}}, {\"prev_action\": {\"action_name\": \"utter_faq\"}, \"user\": {\"intent\": \"faq\"}}, {\"prev_action\": {\"action_name\": \"utter_feedback\"}, \"user\": {\"intent\": \"faq\"}}]": "action_save_convo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"faq\"}}, {\"prev_action\": {\"action_name\": \"utter_faq\"}, \"user\": {\"intent\": \"faq\"}}, {\"prev_action\": {\"action_name\": \"utter_feedback\"}, \"user\": {\"intent\": \"faq\"}}, {\"prev_action\": {\"action_name\": \"action_save_convo\"}, \"user\": {\"intent\": \"faq\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"contact_us\"}}]": "contact_us_form",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"contact_us\"}}, {\"active_loop\": {\"name\": \"contact_us_form\"}, \"prev_action\": {\"action_name\": \"contact_us_form\"}, \"user\": {\"intent\": \"contact_us\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}]": "utter_satisfied",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_satisfied\"}, \"user\": {\"intent\": \"affirm\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "form_enforce_yes_or_no"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"contact_us_form\"}, \"prev_action\": {\"action_name\": \"contact_us_form\"}, \"user\": {\"intent\": \"contact_us\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"outofscope\"}}, {\"prev_action\": {\"action_name\": \"utter_outofscope\"}, \"user\": {\"intent\": \"outofscope\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"action_save_convo\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}]",
+      "handling active loops and forms - form_enforce_yes_or_no",
+      "handling active loops and forms - contact_us_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_satisfied\"}, \"user\": {\"intent\": \"affirm\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - form_enforce_yes_or_no - action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"outofscope\"}}]",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_unsatisfied\"}, \"user\": {\"intent\": \"deny\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"outofscope\"}}, {\"prev_action\": {\"action_name\": \"utter_outofscope\"}, \"user\": {\"intent\": \"outofscope\"}}, {\"prev_action\": {\"action_name\": \"action_save_convo\"}, \"user\": {\"intent\": \"outofscope\"}}]",
+      "[{\"active_loop\": {\"name\": \"form_enforce_yes_or_no\"}, \"prev_action\": {\"action_name\": \"form_enforce_yes_or_no\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"contact_us_form\"}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"contact_us_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_submit_contact_us_form\"}}]"
+    ]
+  }
+}
